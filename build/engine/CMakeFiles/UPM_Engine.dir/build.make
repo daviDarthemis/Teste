@@ -184,6 +184,20 @@ engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.s"
 	cd /data/data/com.termux/files/home/teste/Teste/build/engine && /data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Physics.cpp -o CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.s
 
+engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o: engine/CMakeFiles/UPM_Engine.dir/flags.make
+engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o: /data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Animator.cpp
+engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o: engine/CMakeFiles/UPM_Engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o"
+	cd /data/data/com.termux/files/home/teste/Teste/build/engine && /data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o -MF CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o.d -o CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o -c /data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Animator.cpp
+
+engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.i"
+	cd /data/data/com.termux/files/home/teste/Teste/build/engine && /data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Animator.cpp > CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.i
+
+engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.s"
+	cd /data/data/com.termux/files/home/teste/Teste/build/engine && /data/data/com.termux/files/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Animator.cpp -o CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.s
+
 # Object files for target UPM_Engine
 UPM_Engine_OBJECTS = \
 "CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o" \
@@ -193,7 +207,8 @@ UPM_Engine_OBJECTS = \
 "CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o" \
 "CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o" \
 "CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.o" \
-"CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o"
+"CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o" \
+"CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o"
 
 # External object files for target UPM_Engine
 UPM_Engine_EXTERNAL_OBJECTS =
@@ -206,9 +221,10 @@ engine/libUPM_Engine.a: engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixel
 engine/libUPM_Engine.a: engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o
 engine/libUPM_Engine.a: engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.o
 engine/libUPM_Engine.a: engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o
+engine/libUPM_Engine.a: engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o
 engine/libUPM_Engine.a: engine/CMakeFiles/UPM_Engine.dir/build.make
 engine/libUPM_Engine.a: engine/CMakeFiles/UPM_Engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libUPM_Engine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libUPM_Engine.a"
 	cd /data/data/com.termux/files/home/teste/Teste/build/engine && $(CMAKE_COMMAND) -P CMakeFiles/UPM_Engine.dir/cmake_clean_target.cmake
 	cd /data/data/com.termux/files/home/teste/Teste/build/engine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UPM_Engine.dir/link.txt --verbose=$(VERBOSE)
 

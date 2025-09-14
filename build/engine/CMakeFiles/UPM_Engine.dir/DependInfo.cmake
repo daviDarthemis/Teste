@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/data/data/com.termux/files/home/teste/Teste/engine/src/core/Application.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/renderer/Camera.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/renderer/Renderer.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o.d"
+  "/data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Animator.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Physics.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/world/SingularPixelObject.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/world/WorldGrid.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o.d"

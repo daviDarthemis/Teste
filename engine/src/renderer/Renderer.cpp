@@ -6,7 +6,6 @@
 Renderer::Renderer() : m_SdlRenderer(nullptr), m_ScreenWidth(0), m_ScreenHeight(0) {
 }
 
-// Definição do destrutor (pode estar vazio)
 Renderer::~Renderer() {
 }
 
@@ -45,12 +44,14 @@ void Renderer::DrawWorldPixel(float worldX, float worldY, const Vector4& color) 
     SDL_RenderDrawPoint(m_SdlRenderer, screenPos.x, screenPos.y);
 }
 
-void Renderer::DrawSPO(const SingularPixelObject& spo) {
+void Renderer::DrawSPO(SingularPixelObject& spo) {
     const Vector2f& spoPos = spo.GetPosition();
     const Vector2i& spoSize = spo.GetSize();
+    const std::vector<Vector4>& pixelData = spo.GetDeformedPixelData();
+
     for (int y = 0; y < spoSize.y; ++y) {
         for (int x = 0; x < spoSize.x; ++x) {
-            const Vector4& pixelColor = spo.GetPixel(x, y);
+            const Vector4& pixelColor = pixelData[y * spoSize.x + x];
             if (pixelColor.a > 0) {
                 float worldX = spoPos.x + static_cast<float>(x);
                 float worldY = spoPos.y + static_cast<float>(y);

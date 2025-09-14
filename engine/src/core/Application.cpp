@@ -1,20 +1,18 @@
 #include "core/Application.h"
-#include "renderer/Renderer.h" // A definição completa é necessária aqui para criar o objeto.
+#include "renderer/Renderer.h"
 #include "assets/AssetManager.h"
 #include "world/SingularPixelObject.h"
+#include "simulation/Animator.h"
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <memory>
 
-Application::Application() 
+Application::Application()
     : m_Window(nullptr), m_IsRunning(false) {
-    // Criamos a instância do Renderer dinamicamente.
     m_Renderer = std::make_unique<Renderer>();
 }
 
-// O destrutor precisa de ser definido no .cpp para que o unique_ptr
-// possa ver a definição completa de Renderer e destruí-lo corretamente.
-Application::~Application() = default; 
+Application::~Application() = default;
 
 void Application::Run() {
     // --- INICIALIZAÇÃO ---
@@ -30,14 +28,12 @@ void Application::Run() {
         return;
     }
 
-    // Agora usamos o operador -> porque m_Renderer é um ponteiro.
     if (!m_Renderer->Init(m_Window)) {
         SDL_DestroyWindow(m_Window);
         SDL_Quit();
         return;
     }
 
-    // --- CARREGAMENTO DE ASSETS ---
     AssetManager assetManager;
     std::shared_ptr<SingularPixelObject> venomAsset = assetManager.LoadSPO("venom.upm");
 
@@ -51,10 +47,17 @@ void Application::Run() {
 
     venomAsset->SetPosition({-8.0f, -8.0f});
 
+    Animator animator;
+
     m_IsRunning = true;
+    
+    uint32_t startTime = SDL_GetTicks();
 
     // --- LOOP PRINCIPAL ---
     while (m_IsRunning) {
+        // --- CÁLCULO DO TEMPO ---
+        float totalTime = (SDL_GetTicks() - startTime) / 1000.0f;
+
         // --- PROCESSAMENTO DE EVENTOS ---
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
@@ -72,6 +75,9 @@ void Application::Run() {
                 }
             }
         }
+
+        // --- LÓGICA DE SIMULAÇÃO / ANIMAÇÃO ---
+        animator.ApplyWobble(*venomAsset, totalTime);
 
         // --- RENDERIZAÇÃO ---
         m_Renderer->BeginFrame();

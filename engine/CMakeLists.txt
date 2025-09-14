@@ -22,6 +22,8 @@ add_library(UPM_Engine STATIC
     
     src/simulation/Physics.cpp
     include/simulation/Physics.h
+    src/simulation/Animator.cpp
+    include/simulation/Animator.h
 )
 
 target_include_directories(UPM_Engine PUBLIC

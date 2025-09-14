@@ -11,7 +11,7 @@ class SingularPixelObject;
 class Renderer {
 public:
     Renderer();
-    ~Renderer(); // O destrutor agora é importante por causa do unique_ptr na Application
+    ~Renderer();
 
     bool Init(SDL_Window* window);
     void Shutdown();
@@ -19,7 +19,7 @@ public:
     void EndFrame();
 
     void DrawWorldPixel(float worldX, float worldY, const Vector4& color);
-    void DrawSPO(const SingularPixelObject& spo);
+    void DrawSPO(SingularPixelObject& spo); // Const removido
 
     Camera& GetCamera();
 

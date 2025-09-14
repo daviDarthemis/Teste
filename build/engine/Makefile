@@ -250,6 +250,30 @@ src/renderer/Renderer.cpp.s:
 	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.s
 .PHONY : src/renderer/Renderer.cpp.s
 
+src/simulation/Animator.o: src/simulation/Animator.cpp.o
+.PHONY : src/simulation/Animator.o
+
+# target to build an object file
+src/simulation/Animator.cpp.o:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o
+.PHONY : src/simulation/Animator.cpp.o
+
+src/simulation/Animator.i: src/simulation/Animator.cpp.i
+.PHONY : src/simulation/Animator.i
+
+# target to preprocess a source file
+src/simulation/Animator.cpp.i:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.i
+.PHONY : src/simulation/Animator.cpp.i
+
+src/simulation/Animator.s: src/simulation/Animator.cpp.s
+.PHONY : src/simulation/Animator.s
+
+# target to generate assembly for a file
+src/simulation/Animator.cpp.s:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.s
+.PHONY : src/simulation/Animator.cpp.s
+
 src/simulation/Physics.o: src/simulation/Physics.cpp.o
 .PHONY : src/simulation/Physics.o
 
@@ -346,6 +370,9 @@ help:
 	@echo "... src/renderer/Renderer.o"
 	@echo "... src/renderer/Renderer.i"
 	@echo "... src/renderer/Renderer.s"
+	@echo "... src/simulation/Animator.o"
+	@echo "... src/simulation/Animator.i"
+	@echo "... src/simulation/Animator.s"
 	@echo "... src/simulation/Physics.o"
 	@echo "... src/simulation/Physics.i"
 	@echo "... src/simulation/Physics.s"

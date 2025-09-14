@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.o.d"
   "CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o"
   "CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o.d"
+  "CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o"
+  "CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o.d"
   "CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o"
   "CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o.d"
   "CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o"
