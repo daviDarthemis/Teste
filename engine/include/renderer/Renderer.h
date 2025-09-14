@@ -1,11 +1,13 @@
 #pragma once
 
 #include "core/Types.h"
-#include "renderer/Camera.h" // Incluir a nossa nova câmara
+#include "renderer/Camera.h"
 
-struct Vector4; // A definição está em Renderer.cpp, forward declare é suficiente
+// Forward declarations
+struct Vector4;
 struct SDL_Window;
 struct SDL_Renderer;
+class SingularPixelObject; // Forward declare a nossa nova classe
 
 class Renderer {
 public:
@@ -17,17 +19,17 @@ public:
     void BeginFrame();
     void EndFrame();
 
-    // A nossa função de desenho agora opera em coordenadas do MUNDO (float).
     void DrawWorldPixel(float worldX, float worldY, const Vector4& color);
     
-    // Fornece acesso à câmara para que a Application possa controlá-la.
+    // A nova função para desenhar um objeto inteiro.
+    void DrawSPO(const SingularPixelObject& spo);
+
     Camera& GetCamera();
 
 private:
     SDL_Renderer* m_SdlRenderer;
-    Camera m_Camera; // O Renderer agora tem uma Câmara.
+    Camera m_Camera;
 
-    // Guarda as dimensões da tela para uso da câmara.
     int m_ScreenWidth;
     int m_ScreenHeight;
 };

@@ -1,11 +1,13 @@
 #include "renderer/Renderer.h"
+#include "world/SingularPixelObject.h" // Incluímos a definição completa do SPO
 #include <SDL2/SDL.h>
 #include <iostream>
 
-// A definição do Vector4 move-se para cá, já que apenas o Renderer a usa.
 struct Vector4 {
     unsigned char r, g, b, a;
 };
+
+// ... (O código de Renderer(), ~Renderer(), Init(), Shutdown(), BeginFrame(), EndFrame() permanece igual) ...
 
 Renderer::Renderer() : m_SdlRenderer(nullptr), m_ScreenWidth(0), m_ScreenHeight(0) {
 }
@@ -22,10 +24,7 @@ bool Renderer::Init(SDL_Window* window) {
         std::cerr << "Erro ao criar o renderizador SDL: " << SDL_GetError() << std::endl;
         return false;
     }
-
-    // Obtém e armazena o tamanho da janela.
     SDL_GetWindowSize(window, &m_ScreenWidth, &m_ScreenHeight);
-
     return true;
 }
 
@@ -46,12 +45,32 @@ void Renderer::EndFrame() {
 }
 
 void Renderer::DrawWorldPixel(float worldX, float worldY, const Vector4& color) {
-    // 1. Converte a coordenada do mundo para a coordenada da tela usando a câmara.
     Vector2i screenPos = m_Camera.WorldToScreen({worldX, worldY}, m_ScreenWidth, m_ScreenHeight);
-
-    // 2. Define a cor e desenha o ponto na coordenada da tela.
     SDL_SetRenderDrawColor(m_SdlRenderer, color.r, color.g, color.b, color.a);
     SDL_RenderDrawPoint(m_SdlRenderer, screenPos.x, screenPos.y);
+}
+
+// A nova implementação
+void Renderer::DrawSPO(const SingularPixelObject& spo) {
+    const Vector2f& spoPos = spo.GetPosition();
+    const Vector2i& spoSize = spo.GetSize();
+
+    // Itera por cada pixel local do objeto
+    for (int y = 0; y < spoSize.y; ++y) {
+        for (int x = 0; x < spoSize.x; ++x) {
+            const Vector4& pixelColor = spo.GetPixel(x, y);
+
+            // Otimização: só desenha se não for transparente
+            if (pixelColor.a > 0) {
+                // Calcula a posição do pixel no mundo
+                float worldX = spoPos.x + static_cast<float>(x);
+                float worldY = spoPos.y + static_cast<float>(y);
+
+                // Usa a nossa função já existente para desenhar o pixel no mundo
+                DrawWorldPixel(worldX, worldY, pixelColor);
+            }
+        }
+    }
 }
 
 Camera& Renderer::GetCamera() {
