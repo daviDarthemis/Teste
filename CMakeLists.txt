@@ -11,3 +11,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Informa ao CMake para procurar e processar os CMakeLists.txt nos subdiretórios
 add_subdirectory(engine)
 add_subdirectory(sample_game)
+add_subdirectory(editor) # <<<--- ESTA É A LINHA QUE FALTAVA

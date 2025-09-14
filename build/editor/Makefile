@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles /data/data/com.termux/files/home/teste/Teste/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles /data/data/com.termux/files/home/teste/Teste/build/editor//CMakeFiles/progress.marks
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 editor/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 editor/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,57 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 editor/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 editor/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named UPM_Engine
+# Convenience name for target.
+editor/CMakeFiles/UPM_Generator.dir/rule:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 editor/CMakeFiles/UPM_Generator.dir/rule
+.PHONY : editor/CMakeFiles/UPM_Generator.dir/rule
 
-# Build rule for target.
-UPM_Engine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UPM_Engine
-.PHONY : UPM_Engine
-
-# fast build rule for target.
-UPM_Engine/fast:
-	$(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/build
-.PHONY : UPM_Engine/fast
-
-#=============================================================================
-# Target rules for targets named Game
-
-# Build rule for target.
-Game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Game
-.PHONY : Game
-
-# fast build rule for target.
-Game/fast:
-	$(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/build
-.PHONY : Game/fast
-
-#=============================================================================
-# Target rules for targets named UPM_Generator
-
-# Build rule for target.
-UPM_Generator: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UPM_Generator
+# Convenience name for target.
+UPM_Generator: editor/CMakeFiles/UPM_Generator.dir/rule
 .PHONY : UPM_Generator
 
 # fast build rule for target.
 UPM_Generator/fast:
-	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/build
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/build
 .PHONY : UPM_Generator/fast
+
+src/upm_generator.o: src/upm_generator.cpp.o
+.PHONY : src/upm_generator.o
+
+# target to build an object file
+src/upm_generator.cpp.o:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o
+.PHONY : src/upm_generator.cpp.o
+
+src/upm_generator.i: src/upm_generator.cpp.i
+.PHONY : src/upm_generator.i
+
+# target to preprocess a source file
+src/upm_generator.cpp.i:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.i
+.PHONY : src/upm_generator.cpp.i
+
+src/upm_generator.s: src/upm_generator.cpp.s
+.PHONY : src/upm_generator.s
+
+# target to generate assembly for a file
+src/upm_generator.cpp.s:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.s
+.PHONY : src/upm_generator.cpp.s
 
 # Help Target
 help:
@@ -163,9 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Game"
-	@echo "... UPM_Engine"
 	@echo "... UPM_Generator"
+	@echo "... src/upm_generator.o"
+	@echo "... src/upm_generator.i"
+	@echo "... src/upm_generator.s"
 .PHONY : help
 
 
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

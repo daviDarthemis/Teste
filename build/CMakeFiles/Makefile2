@@ -65,22 +65,45 @@ CMAKE_BINARY_DIR = /data/data/com.termux/files/home/teste/Teste/build
 # The main recursive "all" target.
 all: engine/all
 all: sample_game/all
+all: editor/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: engine/codegen
 codegen: sample_game/codegen
+codegen: editor/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: engine/preinstall
 preinstall: sample_game/preinstall
+preinstall: editor/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: engine/clean
 clean: sample_game/clean
+clean: editor/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory editor
+
+# Recursive "all" directory target.
+editor/all: editor/CMakeFiles/UPM_Generator.dir/all
+.PHONY : editor/all
+
+# Recursive "codegen" directory target.
+editor/codegen: editor/CMakeFiles/UPM_Generator.dir/codegen
+.PHONY : editor/codegen
+
+# Recursive "preinstall" directory target.
+editor/preinstall:
+.PHONY : editor/preinstall
+
+# Recursive "clean" directory target.
+editor/clean: editor/CMakeFiles/UPM_Generator.dir/clean
+.PHONY : editor/clean
 
 #=============================================================================
 # Directory level rules for directory engine
@@ -183,6 +206,38 @@ sample_game/CMakeFiles/Game.dir/codegen:
 sample_game/CMakeFiles/Game.dir/clean:
 	$(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/clean
 .PHONY : sample_game/CMakeFiles/Game.dir/clean
+
+#=============================================================================
+# Target rules for target editor/CMakeFiles/UPM_Generator.dir
+
+# All Build rule for target.
+editor/CMakeFiles/UPM_Generator.dir/all:
+	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/depend
+	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=12,13 "Built target UPM_Generator"
+.PHONY : editor/CMakeFiles/UPM_Generator.dir/all
+
+# Build rule for subdir invocation for target.
+editor/CMakeFiles/UPM_Generator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 editor/CMakeFiles/UPM_Generator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
+.PHONY : editor/CMakeFiles/UPM_Generator.dir/rule
+
+# Convenience name for target.
+UPM_Generator: editor/CMakeFiles/UPM_Generator.dir/rule
+.PHONY : UPM_Generator
+
+# codegen rule for target.
+editor/CMakeFiles/UPM_Generator.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=12,13 "Finished codegen for target UPM_Generator"
+.PHONY : editor/CMakeFiles/UPM_Generator.dir/codegen
+
+# clean rule for target.
+editor/CMakeFiles/UPM_Generator.dir/clean:
+	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/clean
+.PHONY : editor/CMakeFiles/UPM_Generator.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

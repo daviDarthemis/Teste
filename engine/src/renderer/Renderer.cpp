@@ -6,6 +6,7 @@
 Renderer::Renderer() : m_SdlRenderer(nullptr), m_ScreenWidth(0), m_ScreenHeight(0) {
 }
 
+// Definição do destrutor (pode estar vazio)
 Renderer::~Renderer() {
 }
 
@@ -47,19 +48,12 @@ void Renderer::DrawWorldPixel(float worldX, float worldY, const Vector4& color) 
 void Renderer::DrawSPO(const SingularPixelObject& spo) {
     const Vector2f& spoPos = spo.GetPosition();
     const Vector2i& spoSize = spo.GetSize();
-
-    // Itera por cada pixel local do objeto
     for (int y = 0; y < spoSize.y; ++y) {
         for (int x = 0; x < spoSize.x; ++x) {
             const Vector4& pixelColor = spo.GetPixel(x, y);
-
-            // Otimização: só desenha se não for transparente
             if (pixelColor.a > 0) {
-                // Calcula a posição do pixel no mundo
                 float worldX = spoPos.x + static_cast<float>(x);
                 float worldY = spoPos.y + static_cast<float>(y);
-
-                // Usa a nossa função já existente para desenhar o pixel no mundo
                 DrawWorldPixel(worldX, worldY, pixelColor);
             }
         }

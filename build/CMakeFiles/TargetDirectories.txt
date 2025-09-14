@@ -6,3 +6,6 @@
 /data/data/com.termux/files/home/teste/Teste/build/sample_game/CMakeFiles/Game.dir
 /data/data/com.termux/files/home/teste/Teste/build/sample_game/CMakeFiles/edit_cache.dir
 /data/data/com.termux/files/home/teste/Teste/build/sample_game/CMakeFiles/rebuild_cache.dir
+/data/data/com.termux/files/home/teste/Teste/build/editor/CMakeFiles/UPM_Generator.dir
+/data/data/com.termux/files/home/teste/Teste/build/editor/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/teste/Teste/build/editor/CMakeFiles/rebuild_cache.dir

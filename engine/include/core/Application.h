@@ -1,9 +1,10 @@
 #pragma once
 
-#include "renderer/Renderer.h" // Incluímos o nosso novo módulo
+#include <memory>
 
-// Forward declaration
+// Forward declarations para todas as classes que são membros ou usadas como ponteiros.
 struct SDL_Window;
+class Renderer; // Usamos uma forward declaration aqui.
 
 class Application {
 public:
@@ -14,10 +15,11 @@ public:
 
 private:
     SDL_Window* m_Window;
-
-    // A aplicação agora tem uma instância do nosso Renderer.
-    // O ponteiro SDL_Renderer foi removido daqui.
-    Renderer m_Renderer; 
+    
+    // Isto é um problema. Um membro por valor requer a definição completa da classe.
+    // Vamos alterá-lo para um ponteiro para desacoplar totalmente.
+    // Esta é uma mudança de design importante, mas que resolve muitos problemas de dependência.
+    std::unique_ptr<Renderer> m_Renderer;
 
     bool m_IsRunning;
 };

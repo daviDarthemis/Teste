@@ -3,7 +3,7 @@
 #include "core/Types.h"
 #include "renderer/Camera.h"
 
-// Forward declarations das outras classes
+// Forward declarations
 struct SDL_Window;
 struct SDL_Renderer;
 class SingularPixelObject;
@@ -11,7 +11,7 @@ class SingularPixelObject;
 class Renderer {
 public:
     Renderer();
-    ~Renderer();
+    ~Renderer(); // O destrutor agora é importante por causa do unique_ptr na Application
 
     bool Init(SDL_Window* window);
     void Shutdown();

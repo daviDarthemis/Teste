@@ -1,16 +1,20 @@
 #include "core/Application.h"
+#include "renderer/Renderer.h" // A definição completa é necessária aqui para criar o objeto.
+#include "assets/AssetManager.h"
+#include "world/SingularPixelObject.h"
 #include <SDL2/SDL.h>
 #include <iostream>
-
-#include "renderer/Renderer.h"
-#include "world/SingularPixelObject.h"
+#include <memory>
 
 Application::Application() 
     : m_Window(nullptr), m_IsRunning(false) {
+    // Criamos a instância do Renderer dinamicamente.
+    m_Renderer = std::make_unique<Renderer>();
 }
 
-Application::~Application() {
-}
+// O destrutor precisa de ser definido no .cpp para que o unique_ptr
+// possa ver a definição completa de Renderer e destruí-lo corretamente.
+Application::~Application() = default; 
 
 void Application::Run() {
     // --- INICIALIZAÇÃO ---
@@ -26,30 +30,26 @@ void Application::Run() {
         return;
     }
 
-    if (!m_Renderer.Init(m_Window)) {
+    // Agora usamos o operador -> porque m_Renderer é um ponteiro.
+    if (!m_Renderer->Init(m_Window)) {
         SDL_DestroyWindow(m_Window);
         SDL_Quit();
         return;
     }
 
-    // --- CRIAÇÃO DO OBJETO DE TESTE ---
-    SingularPixelObject venomPrototype(16, 16);
-    venomPrototype.SetPosition({-8.0f, -8.0f}); // Centraliza o objeto na origem do mundo
+    // --- CARREGAMENTO DE ASSETS ---
+    AssetManager assetManager;
+    std::shared_ptr<SingularPixelObject> venomAsset = assetManager.LoadSPO("venom.upm");
 
-    Vector4 black = {20, 20, 20, 255};
-    Vector4 white = {255, 255, 255, 255};
-    
-    // Preenche o objeto com o nosso desenho de teste
-    for (int y = 0; y < 16; ++y) {
-        for (int x = 0; x < 16; ++x) {
-            // Cria uma borda branca
-            if (x == 0 || x == 15 || y == 0 || y == 15) {
-                venomPrototype.SetPixel(x, y, white);
-            } else {
-                venomPrototype.SetPixel(x, y, black);
-            }
-        }
+    if (!venomAsset) {
+        std::cerr << "Falha ao carregar o asset principal. Certifique-se de que 'venom.upm' existe." << std::endl;
+        m_Renderer->Shutdown();
+        SDL_DestroyWindow(m_Window);
+        SDL_Quit();
+        return;
     }
+
+    venomAsset->SetPosition({-8.0f, -8.0f});
 
     m_IsRunning = true;
 
@@ -63,27 +63,24 @@ void Application::Run() {
             }
             if (event.type == SDL_KEYDOWN) {
                 switch (event.key.keysym.sym) {
-                    case SDLK_UP: m_Renderer.GetCamera().Move({0.0f, -10.0f / m_Renderer.GetCamera().GetZoom()}); break;
-                    case SDLK_DOWN: m_Renderer.GetCamera().Move({0.0f, 10.0f / m_Renderer.GetCamera().GetZoom()}); break;
-                    case SDLK_LEFT: m_Renderer.GetCamera().Move({-10.0f / m_Renderer.GetCamera().GetZoom(), 0.0f}); break;
-                    case SDLK_RIGHT: m_Renderer.GetCamera().Move({10.0f / m_Renderer.GetCamera().GetZoom(), 0.0f}); break;
-                    case SDLK_KP_PLUS: case SDLK_PLUS: m_Renderer.GetCamera().AdjustZoom(0.1f); break;
-                    case SDLK_KP_MINUS: case SDLK_MINUS: m_Renderer.GetCamera().AdjustZoom(-0.1f); break;
+                    case SDLK_UP: m_Renderer->GetCamera().Move({0.0f, -10.0f / m_Renderer->GetCamera().GetZoom()}); break;
+                    case SDLK_DOWN: m_Renderer->GetCamera().Move({0.0f, 10.0f / m_Renderer->GetCamera().GetZoom()}); break;
+                    case SDLK_LEFT: m_Renderer->GetCamera().Move({-10.0f / m_Renderer->GetCamera().GetZoom(), 0.0f}); break;
+                    case SDLK_RIGHT: m_Renderer->GetCamera().Move({10.0f / m_Renderer->GetCamera().GetZoom(), 0.0f}); break;
+                    case SDLK_KP_PLUS: case SDLK_PLUS: m_Renderer->GetCamera().AdjustZoom(0.1f); break;
+                    case SDLK_KP_MINUS: case SDLK_MINUS: m_Renderer->GetCamera().AdjustZoom(-0.1f); break;
                 }
             }
         }
 
         // --- RENDERIZAÇÃO ---
-        m_Renderer.BeginFrame();
-        
-        // A nossa chamada de desenho agora é muito mais limpa e de alto nível
-        m_Renderer.DrawSPO(venomPrototype);
-
-        m_Renderer.EndFrame();
+        m_Renderer->BeginFrame();
+        m_Renderer->DrawSPO(*venomAsset);
+        m_Renderer->EndFrame();
     }
 
     // --- LIMPEZA ---
-    m_Renderer.Shutdown();
+    m_Renderer->Shutdown();
     SDL_DestroyWindow(m_Window);
     SDL_Quit();
 }
