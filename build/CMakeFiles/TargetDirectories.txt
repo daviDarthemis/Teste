@@ -1,0 +1,8 @@
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles/rebuild_cache.dir
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/engine/CMakeFiles/UPM_Engine.dir
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/engine/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/engine/CMakeFiles/rebuild_cache.dir
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/sample_game/CMakeFiles/Game.dir
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/sample_game/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/sample_game/CMakeFiles/rebuild_cache.dir

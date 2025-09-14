@@ -1,0 +1,2 @@
+/data/data/com.termux/files/usr/bin/llvm-ar qc libUPM_Engine.a CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.o CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.o CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o
+/data/data/com.termux/files/usr/bin/llvm-ranlib libUPM_Engine.a

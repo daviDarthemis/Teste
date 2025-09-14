@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG -Xlinker --dependency-file=CMakeFiles/Game.dir/link.d CMakeFiles/Game.dir/src/main.cpp.o -o Game  ../engine/libUPM_Engine.a /data/data/com.termux/files/usr/lib/libSDL2.so
