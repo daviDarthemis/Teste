@@ -1,4 +1,5 @@
 #include "world/SingularPixelObject.h"
+#include "world/Component.h"
 
 SingularPixelObject::SingularPixelObject(int width, int height)
     : m_Position({0.0f, 0.0f}), m_Size({width, height}) {
@@ -6,6 +7,8 @@ SingularPixelObject::SingularPixelObject(int width, int height)
     m_BasePixelData.resize(width * height, {0, 0, 0, 0});
     m_DeformedPixelData.resize(width * height, {0, 0, 0, 0});
 }
+
+SingularPixelObject::~SingularPixelObject() = default;
 
 void SingularPixelObject::SetBasePixel(int x, int y, const Vector4& color) {
     if (x >= 0 && x < m_Size.x && y >= 0 && y < m_Size.y) {
@@ -43,11 +46,27 @@ const Vector2i& SingularPixelObject::GetSize() const {
     return m_Size;
 }
 
-// NOVO: Implementação dos métodos do Corpo
 std::vector<BodyPart>& SingularPixelObject::GetBodyParts() {
     return m_BodyParts;
 }
 
 const std::vector<BodyPart>& SingularPixelObject::GetBodyParts() const {
     return m_BodyParts;
+}
+
+// Modificado para aceitar um std::unique_ptr<Component>
+void SingularPixelObject::AddComponent(std::unique_ptr<Component> component) {
+    if (component) {
+        m_Components.push_back(std::move(component));
+    }
+}
+
+void SingularPixelObject::UpdateComponents(float deltaTime) {
+    for (const auto& component : m_Components) {
+        component->OnUpdate(deltaTime, *this);
+    }
+}
+
+std::vector<ComponentRequest>& SingularPixelObject::GetComponentRequests() {
+    return m_ComponentRequests;
 }

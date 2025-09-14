@@ -1,6 +1,7 @@
 #include "assets/UPM_Parser.h"
 #include "assets/UPM_Format.h"
 #include "world/SingularPixelObject.h"
+#include "world/ComponentFactory.h"
 #include <iostream>
 #include <cstring>
 
@@ -31,7 +32,6 @@ std::unique_ptr<SingularPixelObject> UPM_Parser::Parse(const std::vector<char>& 
         }
     }
     
-    // --- NOVO: Parsing do Bloco de Corpo ---
     const char* bodyDataPtr = fileData.data() + header->bodyDataOffset;
     uint32_t partCount = *reinterpret_cast<const uint32_t*>(bodyDataPtr);
     bodyDataPtr += sizeof(uint32_t);
@@ -49,6 +49,17 @@ std::unique_ptr<SingularPixelObject> UPM_Parser::Parse(const std::vector<char>& 
             newPart.pixelCoordinates.push_back({static_cast<int>(coord->x), static_cast<int>(coord->y)});
         }
         spo->GetBodyParts().push_back(newPart);
+    }
+
+    const char* componentDataPtr = fileData.data() + header->componentDataOffset;
+    uint32_t componentCount = *reinterpret_cast<const uint32_t*>(componentDataPtr);
+    componentDataPtr += sizeof(uint32_t);
+
+    for (uint32_t i = 0; i < componentCount; ++i) {
+        const UPM_Format::ComponentDescriptor* desc = reinterpret_cast<const UPM_Format::ComponentDescriptor*>(componentDataPtr);
+        componentDataPtr += sizeof(UPM_Format::ComponentDescriptor);
+        
+        spo->GetComponentRequests().push_back({desc->type, std::string(desc->targetPart)});
     }
 
     return spo;

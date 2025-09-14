@@ -1,9 +1,9 @@
-engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
-  /data/data/com.termux/files/home/teste/Teste/engine/src/assets/AssetManager.cpp \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/AssetManager.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/string \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/max.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/comp.h \
+engine/CMakeFiles/UPM_Engine.dir/src/world/ComponentFactory.cpp.o: \
+  /data/data/com.termux/files/home/teste/Teste/engine/src/world/ComponentFactory.cpp \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/ComponentFactory.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/cstdint \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__assert \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__config \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__config_site \
   /data/data/com.termux/files/usr/bin/../../usr/include/features.h \
@@ -12,12 +12,28 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/android/api-level.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/bits/get_device_api_level_inlines.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/android/ndk-version.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__verbose_abort \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__availability \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/stdint.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/stdint.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/stdint.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/bits/wchar_limits.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/stddef.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/stddef.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_header_macro.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_ptrdiff_t.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_size_t.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_wchar_t.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_null.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_nullptr_t.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_max_align_t.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_offsetof.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/string \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/max.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/comp.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/integral_constant.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/operation_traits.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/comp_ref_type.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__assert \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__verbose_abort \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__availability \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__utility/declval.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/max_element.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__iterator/iterator_traits.h \
@@ -38,16 +54,6 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/cstddef \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/enable_if.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/version \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/stddef.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/stddef.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_header_macro.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_ptrdiff_t.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_size_t.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_wchar_t.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_null.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_nullptr_t.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_max_align_t.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/__stddef_offsetof.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_function.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_const.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_reference.h \
@@ -187,11 +193,6 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_trivially_copy_assignable.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_trivially_copy_constructible.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_trivially_copyable.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/cstdint \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/stdint.h \
-  /data/data/com.termux/files/usr/lib/clang/20/include/stdint.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/stdint.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/wchar_limits.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_trivially_default_constructible.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_trivially_destructible.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/is_trivially_move_assignable.h \
@@ -758,23 +759,6 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit/byteswap.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit/endian.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit/has_single_bit.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/map \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/is_transparent.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__node_handle \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__tree \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/functional \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/binary_negate.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/bind.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/bind_back.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/perfect_forward.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/bind_front.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/binder1st.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/binder2nd.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/boyer_moore_searcher.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/array \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/unordered_map \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__hash_table \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/vector \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit_reference \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/formatter.h \
@@ -801,6 +785,7 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/unicode.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/extended_grapheme_cluster_table.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/width_estimation_table.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/array \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/locale \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__locale \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__mutex/once_flag.h \
@@ -828,35 +813,13 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/cstdarg \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__memory/temp_value.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__split_buffer \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/compose.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/default_searcher.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/function.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__memory/builtin_new_allocator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/strip_signature.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/mem_fn.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/mem_fun_ref.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/not_fn.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/pointer_to_binary_function.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/pointer_to_unary_function.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/unary_negate.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Parser.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/world/SingularPixelObject.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/core/Types.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/simulation/ShearAnimationComponent.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/Component.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/simulation/WobbleAnimationComponent.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/simulation/WaveAnimationComponent.h \
   /data/data/com.termux/files/home/teste/Teste/engine/include/world/Body.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/world/ComponentFactory.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/fstream \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/filesystem \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/copy_options.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/directory_entry.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/file_status.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/file_type.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/perms.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/file_time_type.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__chrono/file_clock.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/filesystem_error.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/path.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/iomanip \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/core/Types.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/iostream \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/istream \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/ostream \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/format_args.h \
@@ -883,13 +846,4 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/bits/lockf.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/bits/sysconf.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/android/legacy_unistd_inlines.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/swab.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/operations.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/perm_options.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/space_info.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/directory_iterator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/directory_options.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/path_iterator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/u8path.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/iostream
+  /data/data/com.termux/files/usr/bin/../../usr/include/bits/swab.h

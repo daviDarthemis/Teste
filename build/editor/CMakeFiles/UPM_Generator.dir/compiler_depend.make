@@ -3,6 +3,7 @@
 
 editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o: /data/data/com.termux/files/home/teste/Teste/editor/src/upm_generator.cpp \
   /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h \
+  /data/data/com.termux/files/home/teste/Teste/editor/include/vendor/FastNoiseLite.h \
   /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/bitsperlong.h \
   /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/errno.h \
   /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/fcntl.h \
@@ -786,6 +787,7 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o: /data/data/com.term
   /data/data/com.termux/files/usr/include/c++/v1/ostream \
   /data/data/com.termux/files/usr/include/c++/v1/print \
   /data/data/com.termux/files/usr/include/c++/v1/ratio \
+  /data/data/com.termux/files/usr/include/c++/v1/stdbool.h \
   /data/data/com.termux/files/usr/include/c++/v1/stddef.h \
   /data/data/com.termux/files/usr/include/c++/v1/stdexcept \
   /data/data/com.termux/files/usr/include/c++/v1/stdint.h \
@@ -860,6 +862,7 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o: /data/data/com.term
   /data/data/com.termux/files/usr/lib/clang/20/include/float.h \
   /data/data/com.termux/files/usr/lib/clang/20/include/limits.h \
   /data/data/com.termux/files/usr/lib/clang/20/include/stdarg.h \
+  /data/data/com.termux/files/usr/lib/clang/20/include/stdbool.h \
   /data/data/com.termux/files/usr/lib/clang/20/include/stddef.h \
   /data/data/com.termux/files/usr/lib/clang/20/include/stdint.h
 
@@ -891,6 +894,8 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/lib/clang/20/lib/linux/libclang_rt.builtins-aarch64-android.a:
 
 /data/data/com.termux/files/usr/lib/clang/20/include/stdint.h:
+
+/data/data/com.termux/files/usr/lib/clang/20/include/stdbool.h:
 
 /data/data/com.termux/files/usr/lib/clang/20/include/limits.h:
 
@@ -962,9 +967,7 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/typeinfo:
 
-/data/data/com.termux/files/usr/include/c++/v1/__fwd/memory_resource.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/type_traits:
+/data/data/com.termux/files/usr/include/c++/v1/tuple:
 
 /data/data/com.termux/files/usr/include/c++/v1/system_error:
 
@@ -1428,6 +1431,8 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__memory/allocator_arg_t.h:
 
+/data/data/com.termux/files/usr/include/c++/v1/stdbool.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__memory/align.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_min.h:
@@ -1670,6 +1675,12 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__format/format_to_n_result.h:
 
+/data/data/com.termux/files/usr/include/strings.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__atomic/memory_order.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__format/format_parse_context.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/unwrap_iter.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__fwd/array.h:
@@ -1677,6 +1688,10 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/add_pointer.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/sample.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/type_traits:
+
+/data/data/com.termux/files/usr/include/c++/v1/__fwd/memory_resource.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__format/format_functions.h:
 
@@ -1893,6 +1908,8 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__bit/bit_cast.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/cmath:
+
+/data/data/com.termux/files/home/teste/Teste/editor/include/vendor/FastNoiseLite.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__format/formatter_integer.h:
 
@@ -2142,14 +2159,6 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__atomic/atomic_lock_free.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__type_traits/underlying_type.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/thread.h:
-
-/data/data/com.termux/files/usr/include/bits/strcasecmp.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__utility/piecewise_construct.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_find_end.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_find.h:
@@ -2161,8 +2170,6 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__atomic/check_memory_order.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__compare/compare_three_way_result.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/tuple:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/apply_cv.h:
 
@@ -2207,6 +2214,14 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/pstl_frontend_dispatch.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/ranges_unique.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__type_traits/underlying_type.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/thread.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__utility/piecewise_construct.h:
+
+/data/data/com.termux/files/usr/include/bits/strcasecmp.h:
 
 /data/data/com.termux/files/usr/lib/libc++_shared.so:
 
@@ -2258,13 +2273,13 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/pstl_generate.h:
 
+/data/data/com.termux/files/usr/include/android/api-level.h:
+
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/partial_sort.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_always_bitcastable.h:
 
 /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/bitsperlong.h:
-
-/data/data/com.termux/files/usr/include/android/api-level.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/next_permutation.h:
 
@@ -2428,12 +2443,6 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/pstl_stable_sort.h:
 
-/data/data/com.termux/files/usr/include/strings.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__atomic/memory_order.h:
-
-/data/data/com.termux/files/usr/include/c++/v1/__format/format_parse_context.h:
-
 /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/posix_types.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/copy_move_common.h:
@@ -2476,6 +2485,8 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/bits/wchar_limits.h:
 
+/data/data/com.termux/files/usr/include/bits/wait.h:
+
 /data/data/com.termux/files/usr/include/bits/get_device_api_level_inlines.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_unsigned.h:
@@ -2501,10 +2512,6 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/include/bits/signal_types.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/backend.h:
-
-/data/data/com.termux/files/usr/include/android/versioning.h:
-
-/data/data/com.termux/files/usr/include/bits/getentropy.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__filesystem/path_iterator.h:
 
@@ -2566,8 +2573,6 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_heap.h:
 
-/data/data/com.termux/files/usr/include/bits/wait.h:
-
 /data/data/com.termux/files/usr/include/c++/v1/__math/copysign.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
@@ -2575,6 +2580,10 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/count_if.h:
 
 /data/data/com.termux/files/usr/include/alloca.h:
+
+/data/data/com.termux/files/usr/include/bits/getentropy.h:
+
+/data/data/com.termux/files/usr/include/android/versioning.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__string/extern_template_lists.h:
 
@@ -2604,8 +2613,6 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 
 /data/data/com.termux/files/usr/include/asm-generic/posix_types.h:
 
-/data/data/com.termux/files/usr/include/c++/v1/__bit/bit_width.h:
-
 /data/data/com.termux/files/usr/include/bits/wctype.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__type_traits/is_final.h:
@@ -2613,3 +2620,5 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o:
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
 /data/data/com.termux/files/usr/include/c++/v1/__algorithm/partition_copy.h:
+
+/data/data/com.termux/files/usr/include/c++/v1/__bit/bit_width.h:

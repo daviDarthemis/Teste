@@ -816,6 +816,8 @@ engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/cstdarg \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__memory/temp_value.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__split_buffer \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/ComponentFactory.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/SDL2/SDL.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/SDL2/SDL_main.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/SDL2/SDL_stdinc.h \

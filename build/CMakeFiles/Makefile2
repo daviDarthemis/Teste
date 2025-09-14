@@ -150,12 +150,12 @@ sample_game/clean: sample_game/CMakeFiles/Game.dir/clean
 engine/CMakeFiles/UPM_Engine.dir/all:
 	$(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Built target UPM_Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target UPM_Engine"
 .PHONY : engine/CMakeFiles/UPM_Engine.dir/all
 
 # Build rule for subdir invocation for target.
 engine/CMakeFiles/UPM_Engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/CMakeFiles/UPM_Engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
 .PHONY : engine/CMakeFiles/UPM_Engine.dir/rule
@@ -167,7 +167,7 @@ UPM_Engine: engine/CMakeFiles/UPM_Engine.dir/rule
 # codegen rule for target.
 engine/CMakeFiles/UPM_Engine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Finished codegen for target UPM_Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Finished codegen for target UPM_Engine"
 .PHONY : engine/CMakeFiles/UPM_Engine.dir/codegen
 
 # clean rule for target.
@@ -187,7 +187,7 @@ sample_game/CMakeFiles/Game.dir/all: engine/CMakeFiles/UPM_Engine.dir/all
 
 # Build rule for subdir invocation for target.
 sample_game/CMakeFiles/Game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/CMakeFiles/Game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
 .PHONY : sample_game/CMakeFiles/Game.dir/rule
@@ -214,7 +214,7 @@ sample_game/CMakeFiles/Game.dir/clean:
 editor/CMakeFiles/UPM_Generator.dir/all:
 	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/depend
 	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=13,14 "Built target UPM_Generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=17,18 "Built target UPM_Generator"
 .PHONY : editor/CMakeFiles/UPM_Generator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +231,7 @@ UPM_Generator: editor/CMakeFiles/UPM_Generator.dir/rule
 # codegen rule for target.
 editor/CMakeFiles/UPM_Generator.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f editor/CMakeFiles/UPM_Generator.dir/build.make editor/CMakeFiles/UPM_Generator.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=13,14 "Finished codegen for target UPM_Generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=17,18 "Finished codegen for target UPM_Generator"
 .PHONY : editor/CMakeFiles/UPM_Generator.dir/codegen
 
 # clean rule for target.

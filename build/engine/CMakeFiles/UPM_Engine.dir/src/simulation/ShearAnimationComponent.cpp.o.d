@@ -1,6 +1,7 @@
-engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
-  /data/data/com.termux/files/home/teste/Teste/engine/src/assets/AssetManager.cpp \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/AssetManager.h \
+engine/CMakeFiles/UPM_Engine.dir/src/simulation/ShearAnimationComponent.cpp.o: \
+  /data/data/com.termux/files/home/teste/Teste/engine/src/simulation/ShearAnimationComponent.cpp \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/simulation/ShearAnimationComponent.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/Component.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/string \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/max.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__algorithm/comp.h \
@@ -758,23 +759,10 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit/byteswap.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit/endian.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit/has_single_bit.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/map \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/is_transparent.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__node_handle \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__tree \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/functional \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/binary_negate.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/bind.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/bind_back.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/perfect_forward.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/bind_front.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/binder1st.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/binder2nd.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/boyer_moore_searcher.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/array \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/unordered_map \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__hash_table \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/simulation/Animator.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/SingularPixelObject.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/core/Types.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/Body.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/vector \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__bit_reference \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/formatter.h \
@@ -801,6 +789,7 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/unicode.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/extended_grapheme_cluster_table.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/width_estimation_table.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/array \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/locale \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__locale \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__mutex/once_flag.h \
@@ -828,68 +817,5 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/cstdarg \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__memory/temp_value.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__split_buffer \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/compose.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/default_searcher.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/function.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__memory/builtin_new_allocator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__type_traits/strip_signature.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/mem_fn.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/mem_fun_ref.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/not_fn.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/pointer_to_binary_function.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/pointer_to_unary_function.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__functional/unary_negate.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Parser.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/world/SingularPixelObject.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/core/Types.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/world/Body.h \
   /data/data/com.termux/files/home/teste/Teste/engine/include/world/ComponentFactory.h \
-  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/fstream \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/filesystem \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/copy_options.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/directory_entry.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/file_status.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/file_type.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/perms.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/file_time_type.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__chrono/file_clock.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/filesystem_error.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/path.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/iomanip \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/istream \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/ostream \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/format_args.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/format_arg_store.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/format_functions.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/format_context.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/formatter_char.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/write_escaped.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__chrono/statically_widen.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/escaped_output_table.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/formatter_floating_point.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__charconv/chars_format.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__charconv/to_chars_floating_point.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/formatter_integer.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/formatter_pointer.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__format/formatter_string.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/bitset \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/print \
-  /data/data/com.termux/files/usr/bin/../../usr/include/unistd.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/fcntl.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/getentropy.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/getopt.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/ioctl.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/lockf.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/sysconf.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/android/legacy_unistd_inlines.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/swab.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/operations.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/perm_options.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/space_info.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/directory_iterator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/directory_options.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/path_iterator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/u8path.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/iostream
+  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h

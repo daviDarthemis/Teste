@@ -814,4 +814,6 @@ engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__locale_dir/locale_base_api/locale_guard.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/cstdarg \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__memory/temp_value.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__split_buffer
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__split_buffer \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/ComponentFactory.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h

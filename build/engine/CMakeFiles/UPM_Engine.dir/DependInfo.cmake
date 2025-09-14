@@ -15,8 +15,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/data/data/com.termux/files/home/teste/Teste/engine/src/renderer/Renderer.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Animator.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Animator.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/simulation/Physics.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o.d"
+  "/data/data/com.termux/files/home/teste/Teste/engine/src/simulation/ShearAnimationComponent.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/ShearAnimationComponent.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/ShearAnimationComponent.cpp.o.d"
+  "/data/data/com.termux/files/home/teste/Teste/engine/src/simulation/WaveAnimationComponent.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/WaveAnimationComponent.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/WaveAnimationComponent.cpp.o.d"
+  "/data/data/com.termux/files/home/teste/Teste/engine/src/simulation/WobbleAnimationComponent.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/WobbleAnimationComponent.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/simulation/WobbleAnimationComponent.cpp.o.d"
+  "/data/data/com.termux/files/home/teste/Teste/engine/src/world/ComponentFactory.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/world/ComponentFactory.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/world/ComponentFactory.cpp.o.d"
   "/data/data/com.termux/files/home/teste/Teste/engine/src/world/SingularPixelObject.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o.d"
-  "/data/data/com.termux/files/home/teste/Teste/engine/src/world/WorldGrid.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o.d"
+  "/data/data/com.termux/files/home/teste/Teste/engine/src/world/World.cpp" "engine/CMakeFiles/UPM_Engine.dir/src/world/World.cpp.o" "gcc" "engine/CMakeFiles/UPM_Engine.dir/src/world/World.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -298,6 +298,102 @@ src/simulation/Physics.cpp.s:
 	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.s
 .PHONY : src/simulation/Physics.cpp.s
 
+src/simulation/ShearAnimationComponent.o: src/simulation/ShearAnimationComponent.cpp.o
+.PHONY : src/simulation/ShearAnimationComponent.o
+
+# target to build an object file
+src/simulation/ShearAnimationComponent.cpp.o:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/ShearAnimationComponent.cpp.o
+.PHONY : src/simulation/ShearAnimationComponent.cpp.o
+
+src/simulation/ShearAnimationComponent.i: src/simulation/ShearAnimationComponent.cpp.i
+.PHONY : src/simulation/ShearAnimationComponent.i
+
+# target to preprocess a source file
+src/simulation/ShearAnimationComponent.cpp.i:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/ShearAnimationComponent.cpp.i
+.PHONY : src/simulation/ShearAnimationComponent.cpp.i
+
+src/simulation/ShearAnimationComponent.s: src/simulation/ShearAnimationComponent.cpp.s
+.PHONY : src/simulation/ShearAnimationComponent.s
+
+# target to generate assembly for a file
+src/simulation/ShearAnimationComponent.cpp.s:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/ShearAnimationComponent.cpp.s
+.PHONY : src/simulation/ShearAnimationComponent.cpp.s
+
+src/simulation/WaveAnimationComponent.o: src/simulation/WaveAnimationComponent.cpp.o
+.PHONY : src/simulation/WaveAnimationComponent.o
+
+# target to build an object file
+src/simulation/WaveAnimationComponent.cpp.o:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/WaveAnimationComponent.cpp.o
+.PHONY : src/simulation/WaveAnimationComponent.cpp.o
+
+src/simulation/WaveAnimationComponent.i: src/simulation/WaveAnimationComponent.cpp.i
+.PHONY : src/simulation/WaveAnimationComponent.i
+
+# target to preprocess a source file
+src/simulation/WaveAnimationComponent.cpp.i:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/WaveAnimationComponent.cpp.i
+.PHONY : src/simulation/WaveAnimationComponent.cpp.i
+
+src/simulation/WaveAnimationComponent.s: src/simulation/WaveAnimationComponent.cpp.s
+.PHONY : src/simulation/WaveAnimationComponent.s
+
+# target to generate assembly for a file
+src/simulation/WaveAnimationComponent.cpp.s:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/WaveAnimationComponent.cpp.s
+.PHONY : src/simulation/WaveAnimationComponent.cpp.s
+
+src/simulation/WobbleAnimationComponent.o: src/simulation/WobbleAnimationComponent.cpp.o
+.PHONY : src/simulation/WobbleAnimationComponent.o
+
+# target to build an object file
+src/simulation/WobbleAnimationComponent.cpp.o:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/WobbleAnimationComponent.cpp.o
+.PHONY : src/simulation/WobbleAnimationComponent.cpp.o
+
+src/simulation/WobbleAnimationComponent.i: src/simulation/WobbleAnimationComponent.cpp.i
+.PHONY : src/simulation/WobbleAnimationComponent.i
+
+# target to preprocess a source file
+src/simulation/WobbleAnimationComponent.cpp.i:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/WobbleAnimationComponent.cpp.i
+.PHONY : src/simulation/WobbleAnimationComponent.cpp.i
+
+src/simulation/WobbleAnimationComponent.s: src/simulation/WobbleAnimationComponent.cpp.s
+.PHONY : src/simulation/WobbleAnimationComponent.s
+
+# target to generate assembly for a file
+src/simulation/WobbleAnimationComponent.cpp.s:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/WobbleAnimationComponent.cpp.s
+.PHONY : src/simulation/WobbleAnimationComponent.cpp.s
+
+src/world/ComponentFactory.o: src/world/ComponentFactory.cpp.o
+.PHONY : src/world/ComponentFactory.o
+
+# target to build an object file
+src/world/ComponentFactory.cpp.o:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/ComponentFactory.cpp.o
+.PHONY : src/world/ComponentFactory.cpp.o
+
+src/world/ComponentFactory.i: src/world/ComponentFactory.cpp.i
+.PHONY : src/world/ComponentFactory.i
+
+# target to preprocess a source file
+src/world/ComponentFactory.cpp.i:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/ComponentFactory.cpp.i
+.PHONY : src/world/ComponentFactory.cpp.i
+
+src/world/ComponentFactory.s: src/world/ComponentFactory.cpp.s
+.PHONY : src/world/ComponentFactory.s
+
+# target to generate assembly for a file
+src/world/ComponentFactory.cpp.s:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/ComponentFactory.cpp.s
+.PHONY : src/world/ComponentFactory.cpp.s
+
 src/world/SingularPixelObject.o: src/world/SingularPixelObject.cpp.o
 .PHONY : src/world/SingularPixelObject.o
 
@@ -322,29 +418,29 @@ src/world/SingularPixelObject.cpp.s:
 	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.s
 .PHONY : src/world/SingularPixelObject.cpp.s
 
-src/world/WorldGrid.o: src/world/WorldGrid.cpp.o
-.PHONY : src/world/WorldGrid.o
+src/world/World.o: src/world/World.cpp.o
+.PHONY : src/world/World.o
 
 # target to build an object file
-src/world/WorldGrid.cpp.o:
-	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o
-.PHONY : src/world/WorldGrid.cpp.o
+src/world/World.cpp.o:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/World.cpp.o
+.PHONY : src/world/World.cpp.o
 
-src/world/WorldGrid.i: src/world/WorldGrid.cpp.i
-.PHONY : src/world/WorldGrid.i
+src/world/World.i: src/world/World.cpp.i
+.PHONY : src/world/World.i
 
 # target to preprocess a source file
-src/world/WorldGrid.cpp.i:
-	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.i
-.PHONY : src/world/WorldGrid.cpp.i
+src/world/World.cpp.i:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/World.cpp.i
+.PHONY : src/world/World.cpp.i
 
-src/world/WorldGrid.s: src/world/WorldGrid.cpp.s
-.PHONY : src/world/WorldGrid.s
+src/world/World.s: src/world/World.cpp.s
+.PHONY : src/world/World.s
 
 # target to generate assembly for a file
-src/world/WorldGrid.cpp.s:
-	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.s
-.PHONY : src/world/WorldGrid.cpp.s
+src/world/World.cpp.s:
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/World.cpp.s
+.PHONY : src/world/World.cpp.s
 
 # Help Target
 help:
@@ -376,12 +472,24 @@ help:
 	@echo "... src/simulation/Physics.o"
 	@echo "... src/simulation/Physics.i"
 	@echo "... src/simulation/Physics.s"
+	@echo "... src/simulation/ShearAnimationComponent.o"
+	@echo "... src/simulation/ShearAnimationComponent.i"
+	@echo "... src/simulation/ShearAnimationComponent.s"
+	@echo "... src/simulation/WaveAnimationComponent.o"
+	@echo "... src/simulation/WaveAnimationComponent.i"
+	@echo "... src/simulation/WaveAnimationComponent.s"
+	@echo "... src/simulation/WobbleAnimationComponent.o"
+	@echo "... src/simulation/WobbleAnimationComponent.i"
+	@echo "... src/simulation/WobbleAnimationComponent.s"
+	@echo "... src/world/ComponentFactory.o"
+	@echo "... src/world/ComponentFactory.i"
+	@echo "... src/world/ComponentFactory.s"
 	@echo "... src/world/SingularPixelObject.o"
 	@echo "... src/world/SingularPixelObject.i"
 	@echo "... src/world/SingularPixelObject.s"
-	@echo "... src/world/WorldGrid.o"
-	@echo "... src/world/WorldGrid.i"
-	@echo "... src/world/WorldGrid.s"
+	@echo "... src/world/World.o"
+	@echo "... src/world/World.i"
+	@echo "... src/world/World.s"
 .PHONY : help
 
 

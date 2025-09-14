@@ -4,6 +4,7 @@
 editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o
  /data/data/com.termux/files/home/teste/Teste/editor/src/upm_generator.cpp
  /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h
+ /data/data/com.termux/files/home/teste/Teste/editor/include/vendor/FastNoiseLite.h
  /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/bitsperlong.h
  /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/errno.h
  /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/fcntl.h
@@ -787,6 +788,7 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o
  /data/data/com.termux/files/usr/include/c++/v1/ostream
  /data/data/com.termux/files/usr/include/c++/v1/print
  /data/data/com.termux/files/usr/include/c++/v1/ratio
+ /data/data/com.termux/files/usr/include/c++/v1/stdbool.h
  /data/data/com.termux/files/usr/include/c++/v1/stddef.h
  /data/data/com.termux/files/usr/include/c++/v1/stdexcept
  /data/data/com.termux/files/usr/include/c++/v1/stdint.h
@@ -861,6 +863,7 @@ editor/CMakeFiles/UPM_Generator.dir/src/upm_generator.cpp.o
  /data/data/com.termux/files/usr/lib/clang/20/include/float.h
  /data/data/com.termux/files/usr/lib/clang/20/include/limits.h
  /data/data/com.termux/files/usr/lib/clang/20/include/stdarg.h
+ /data/data/com.termux/files/usr/lib/clang/20/include/stdbool.h
  /data/data/com.termux/files/usr/lib/clang/20/include/stddef.h
  /data/data/com.termux/files/usr/lib/clang/20/include/stdint.h
 
