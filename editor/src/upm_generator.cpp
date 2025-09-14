@@ -1,5 +1,6 @@
 #include "assets/UPM_Format.h"
 #include "vendor/FastNoiseLite.h"
+#include "core/Types.h" // <<<--- ESTA É A CORREÇÃO FUNDAMENTAL
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -7,14 +8,13 @@
 #include <string>
 #include <cstring>
 #include <ctime>
-#include <cmath> // Para abs
+#include <cmath>
 
 struct Color { uint8_t r, g, b, a; };
 
 int main() {
     std::cout << "Gerador de UPM v2.1 (com Tentáculos Processuais)" << std::endl;
 
-    // --- Configuração da Geração ---
     fnl_state noise = fnlCreateState();
     noise.noise_type = FNL_NOISE_OPENSIMPLEX2;
     srand(time(NULL));
@@ -22,8 +22,10 @@ int main() {
     noise.frequency = 0.1f;
     float noiseThreshold = 0.0f;
 
-    // --- Definição dos Dados ---
     UPM_Format::Header header;
+    header.magic = 0x204D5055;
+    header.version = 1;
+
     UPM_Format::Manifest manifest;
     manifest.imageWidth = 16;
     manifest.imageHeight = 16;
@@ -36,7 +38,6 @@ int main() {
     UPM_Format::BodyPartHeader corePartHeader;
     std::vector<UPM_Format::PixelCoord> corePartPixels;
 
-    // --- Geração do Núcleo (Core) ---
     for (uint16_t y = 0; y < manifest.imageHeight; ++y) {
         for (uint16_t x = 0; x < manifest.imageWidth; ++x) {
             float noiseValue = fnlGetNoise2D(&noise, (float)x, (float)y);
@@ -49,13 +50,11 @@ int main() {
     strncpy(corePartHeader.name, "core", 32);
     corePartHeader.pixelCount = corePartPixels.size();
 
-    // --- Geração do Tentáculo (Random Walker) ---
     const int numTentacleSegments = 4;
     const int segmentLength = 3;
     std::vector<UPM_Format::BodyPartHeader> tentaclePartHeaders(numTentacleSegments);
     std::vector<std::vector<UPM_Format::PixelCoord>> tentaclePixels(numTentacleSegments);
 
-    // 1. Encontrar um ponto de ancoragem na borda direita do núcleo
     Vector2i anchorPoint = {-1, -1};
     int bestX = 0;
     for (const auto& p : corePartPixels) {
@@ -65,7 +64,6 @@ int main() {
         }
     }
 
-    // 2. Executar o Random Walker se um ponto de ancoragem foi encontrado
     if (anchorPoint.x != -1) {
         Vector2i currentPos = anchorPoint;
         for (int i = 0; i < numTentacleSegments; ++i) {
@@ -73,19 +71,17 @@ int main() {
             strncpy(tentaclePartHeaders[i].name, partName.c_str(), 32);
 
             for (int j = 0; j < segmentLength; ++j) {
-                // Escolher uma direção com forte viés para a direita
                 int dx = 0, dy = 0;
                 int r = rand() % 10;
-                if (r < 6) dx = 1;  // 60% de chance de ir para a direita
-                else if (r < 8) dy = 1; // 20% para baixo
-                else dy = -1;       // 20% para cima
+                if (r < 6) dx = 1;
+                else if (r < 8) dy = 1;
+                else dy = -1;
 
                 Vector2i nextPos = {currentPos.x + dx, currentPos.y + dy};
 
-                // Validar o próximo passo
                 if (nextPos.x >= 0 && nextPos.x < manifest.imageWidth && 
                     nextPos.y >= 0 && nextPos.y < manifest.imageHeight &&
-                    imageData[nextPos.y * manifest.imageWidth + nextPos.x].a == 0) // Só anda para espaço vazio
+                    imageData[nextPos.y * manifest.imageWidth + nextPos.x].a == 0)
                 {
                     currentPos = nextPos;
                     imageData[currentPos.y * manifest.imageWidth + currentPos.x] = red;
@@ -96,12 +92,10 @@ int main() {
         }
     }
     
-    // --- Definir Componentes ---
     std::vector<UPM_Format::ComponentDescriptor> components;
-    components.push_back({2, "core"}); // Wobble no Core
-    components.push_back({3, "tentacle_"}); // Wave no prefixo "tentacle_"
+    components.push_back({2, "core"});
+    components.push_back({3, "tentacle_"});
 
-    // --- Calcular Offsets e Escrever Ficheiro ---
     size_t imageDataSize = imageData.size() * sizeof(Color);
     size_t corePartDataSize = sizeof(corePartHeader) + (corePartPixels.size() * sizeof(UPM_Format::PixelCoord));
     size_t allTentaclesDataSize = 0;
