@@ -897,4 +897,8 @@ engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o: \
   /data/data/com.termux/files/usr/bin/../../usr/include/bits/lockf.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/bits/sysconf.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/android/legacy_unistd_inlines.h \
-  /data/data/com.termux/files/usr/bin/../../usr/include/bits/swab.h
+  /data/data/com.termux/files/usr/bin/../../usr/include/bits/swab.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/SingularPixelObject.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/vector \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__memory/temp_value.h \
+  /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__split_buffer

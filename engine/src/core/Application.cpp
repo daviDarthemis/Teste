@@ -3,10 +3,7 @@
 #include <iostream>
 
 #include "renderer/Renderer.h"
-#include "world/SingularPixelObject.h" // Incluir o nosso SPO
-
-// Definição local do Vector4 necessária para criar cores aqui
-struct Vector4 { unsigned char r, g, b, a; };
+#include "world/SingularPixelObject.h"
 
 Application::Application() 
     : m_Window(nullptr), m_IsRunning(false) {
@@ -18,18 +15,20 @@ Application::~Application() {
 void Application::Run() {
     // --- INICIALIZAÇÃO ---
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
-        //... (código de erro igual)
+        std::cerr << "Erro ao inicializar SDL: " << SDL_GetError() << std::endl;
         return;
     }
 
     m_Window = SDL_CreateWindow("Unix Pixel Mechanics", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_SHOWN);
     if (!m_Window) {
-        //... (código de erro igual)
+        std::cerr << "Erro ao criar a janela: " << SDL_GetError() << std::endl;
+        SDL_Quit();
         return;
     }
 
     if (!m_Renderer.Init(m_Window)) {
-        //... (código de erro igual)
+        SDL_DestroyWindow(m_Window);
+        SDL_Quit();
         return;
     }
 
@@ -59,7 +58,6 @@ void Application::Run() {
         // --- PROCESSAMENTO DE EVENTOS ---
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
-            // ... (código de eventos de teclado e fechar janela permanece o mesmo) ...
             if (event.type == SDL_QUIT) {
                 m_IsRunning = false;
             }

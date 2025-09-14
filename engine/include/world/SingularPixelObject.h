@@ -1,10 +1,7 @@
 #pragma once
 
-#include "core/Types.h"
+#include "core/Types.h" // Inclui a definição completa de Vector2f, Vector2i, e Vector4
 #include <vector>
-
-// Forward declare o nosso tipo de cor para evitar incluir o Renderer.h aqui
-struct Vector4;
 
 class SingularPixelObject {
 public:

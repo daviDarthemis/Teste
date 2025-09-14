@@ -1,5 +1,4 @@
 #include "world/SingularPixelObject.h"
-#include "renderer/Renderer.h" // Precisamos incluir para a definição completa de Vector4
 
 SingularPixelObject::SingularPixelObject(int width, int height)
     : m_Position({0.0f, 0.0f}), m_Size({width, height}) {

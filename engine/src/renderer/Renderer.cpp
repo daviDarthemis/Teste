@@ -1,13 +1,7 @@
 #include "renderer/Renderer.h"
-#include "world/SingularPixelObject.h" // Incluímos a definição completa do SPO
+#include "world/SingularPixelObject.h"
 #include <SDL2/SDL.h>
 #include <iostream>
-
-struct Vector4 {
-    unsigned char r, g, b, a;
-};
-
-// ... (O código de Renderer(), ~Renderer(), Init(), Shutdown(), BeginFrame(), EndFrame() permanece igual) ...
 
 Renderer::Renderer() : m_SdlRenderer(nullptr), m_ScreenWidth(0), m_ScreenHeight(0) {
 }
@@ -50,7 +44,6 @@ void Renderer::DrawWorldPixel(float worldX, float worldY, const Vector4& color) 
     SDL_RenderDrawPoint(m_SdlRenderer, screenPos.x, screenPos.y);
 }
 
-// A nova implementação
 void Renderer::DrawSPO(const SingularPixelObject& spo) {
     const Vector2f& spoPos = spo.GetPosition();
     const Vector2i& spoSize = spo.GetSize();

@@ -3,11 +3,10 @@
 #include "core/Types.h"
 #include "renderer/Camera.h"
 
-// Forward declarations
-struct Vector4;
+// Forward declarations das outras classes
 struct SDL_Window;
 struct SDL_Renderer;
-class SingularPixelObject; // Forward declare a nossa nova classe
+class SingularPixelObject;
 
 class Renderer {
 public:
@@ -20,8 +19,6 @@ public:
     void EndFrame();
 
     void DrawWorldPixel(float worldX, float worldY, const Vector4& color);
-    
-    // A nova função para desenhar um objeto inteiro.
     void DrawSPO(const SingularPixelObject& spo);
 
     Camera& GetCamera();
@@ -29,7 +26,6 @@ public:
 private:
     SDL_Renderer* m_SdlRenderer;
     Camera m_Camera;
-
     int m_ScreenWidth;
     int m_ScreenHeight;
 };
