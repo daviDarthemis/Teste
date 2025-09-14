@@ -60,12 +60,10 @@ void Application::Run() {
                         m_Renderer.GetCamera().Move({10.0f / m_Renderer.GetCamera().GetZoom(), 0.0f});
                         break;
                     // Controlo de zoom da câmara
-                    case SDLK_KP_PLUS: // Tecla '+' do teclado numérico
-                    case SDLK_PLUS:
+                    case SDLK_q:
                         m_Renderer.GetCamera().AdjustZoom(0.1f);
                         break;
-                    case SDLK_KP_MINUS: // Tecla '-' do teclado numérico
-                    case SDLK_MINUS:
+                    case SDLK_e:
                         m_Renderer.GetCamera().AdjustZoom(-0.1f);
                         break;
                 }
