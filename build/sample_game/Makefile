@@ -57,10 +57,10 @@ RM = /data/data/com.termux/files/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/data/com.termux/files/home/teste/UnixPixelMechanics
+CMAKE_SOURCE_DIR = /data/data/com.termux/files/home/teste/Teste
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/data/com.termux/files/home/teste/UnixPixelMechanics/build
+CMAKE_BINARY_DIR = /data/data/com.termux/files/home/teste/Teste/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/sample_game//CMakeFiles/progress.marks
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles 0
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles /data/data/com.termux/files/home/teste/Teste/build/sample_game//CMakeFiles/progress.marks
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/clean
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/preinstall
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/preinstall
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 sample_game/CMakeFiles/Game.dir/rule:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/CMakeFiles/Game.dir/rule
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/CMakeFiles/Game.dir/rule
 .PHONY : sample_game/CMakeFiles/Game.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ Game: sample_game/CMakeFiles/Game.dir/rule
 
 # fast build rule for target.
 Game/fast:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/build
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/build
 .PHONY : Game/fast
 
 src/main.o: src/main.cpp.o
@@ -135,7 +135,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/src/main.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -143,7 +143,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/src/main.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -151,7 +151,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/src/main.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

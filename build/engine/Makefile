@@ -57,10 +57,10 @@ RM = /data/data/com.termux/files/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/data/com.termux/files/home/teste/UnixPixelMechanics
+CMAKE_SOURCE_DIR = /data/data/com.termux/files/home/teste/Teste
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/data/com.termux/files/home/teste/UnixPixelMechanics/build
+CMAKE_BINARY_DIR = /data/data/com.termux/files/home/teste/Teste/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/engine//CMakeFiles/progress.marks
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles 0
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles /data/data/com.termux/files/home/teste/Teste/build/engine//CMakeFiles/progress.marks
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/clean
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/preinstall
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/preinstall
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 engine/CMakeFiles/UPM_Engine.dir/rule:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/CMakeFiles/UPM_Engine.dir/rule
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/CMakeFiles/UPM_Engine.dir/rule
 .PHONY : engine/CMakeFiles/UPM_Engine.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ UPM_Engine: engine/CMakeFiles/UPM_Engine.dir/rule
 
 # fast build rule for target.
 UPM_Engine/fast:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/build
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/build
 .PHONY : UPM_Engine/fast
 
 src/assets/AssetManager.o: src/assets/AssetManager.cpp.o
@@ -135,7 +135,7 @@ src/assets/AssetManager.o: src/assets/AssetManager.cpp.o
 
 # target to build an object file
 src/assets/AssetManager.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o
 .PHONY : src/assets/AssetManager.cpp.o
 
 src/assets/AssetManager.i: src/assets/AssetManager.cpp.i
@@ -143,7 +143,7 @@ src/assets/AssetManager.i: src/assets/AssetManager.cpp.i
 
 # target to preprocess a source file
 src/assets/AssetManager.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.i
 .PHONY : src/assets/AssetManager.cpp.i
 
 src/assets/AssetManager.s: src/assets/AssetManager.cpp.s
@@ -151,7 +151,7 @@ src/assets/AssetManager.s: src/assets/AssetManager.cpp.s
 
 # target to generate assembly for a file
 src/assets/AssetManager.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.s
 .PHONY : src/assets/AssetManager.cpp.s
 
 src/assets/UPM_Parser.o: src/assets/UPM_Parser.cpp.o
@@ -159,7 +159,7 @@ src/assets/UPM_Parser.o: src/assets/UPM_Parser.cpp.o
 
 # target to build an object file
 src/assets/UPM_Parser.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.o
 .PHONY : src/assets/UPM_Parser.cpp.o
 
 src/assets/UPM_Parser.i: src/assets/UPM_Parser.cpp.i
@@ -167,7 +167,7 @@ src/assets/UPM_Parser.i: src/assets/UPM_Parser.cpp.i
 
 # target to preprocess a source file
 src/assets/UPM_Parser.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.i
 .PHONY : src/assets/UPM_Parser.cpp.i
 
 src/assets/UPM_Parser.s: src/assets/UPM_Parser.cpp.s
@@ -175,7 +175,7 @@ src/assets/UPM_Parser.s: src/assets/UPM_Parser.cpp.s
 
 # target to generate assembly for a file
 src/assets/UPM_Parser.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.s
 .PHONY : src/assets/UPM_Parser.cpp.s
 
 src/core/Application.o: src/core/Application.cpp.o
@@ -183,7 +183,7 @@ src/core/Application.o: src/core/Application.cpp.o
 
 # target to build an object file
 src/core/Application.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o
 .PHONY : src/core/Application.cpp.o
 
 src/core/Application.i: src/core/Application.cpp.i
@@ -191,7 +191,7 @@ src/core/Application.i: src/core/Application.cpp.i
 
 # target to preprocess a source file
 src/core/Application.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.i
 .PHONY : src/core/Application.cpp.i
 
 src/core/Application.s: src/core/Application.cpp.s
@@ -199,7 +199,7 @@ src/core/Application.s: src/core/Application.cpp.s
 
 # target to generate assembly for a file
 src/core/Application.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.s
 .PHONY : src/core/Application.cpp.s
 
 src/renderer/Camera.o: src/renderer/Camera.cpp.o
@@ -207,7 +207,7 @@ src/renderer/Camera.o: src/renderer/Camera.cpp.o
 
 # target to build an object file
 src/renderer/Camera.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.o
 .PHONY : src/renderer/Camera.cpp.o
 
 src/renderer/Camera.i: src/renderer/Camera.cpp.i
@@ -215,7 +215,7 @@ src/renderer/Camera.i: src/renderer/Camera.cpp.i
 
 # target to preprocess a source file
 src/renderer/Camera.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.i
 .PHONY : src/renderer/Camera.cpp.i
 
 src/renderer/Camera.s: src/renderer/Camera.cpp.s
@@ -223,7 +223,7 @@ src/renderer/Camera.s: src/renderer/Camera.cpp.s
 
 # target to generate assembly for a file
 src/renderer/Camera.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Camera.cpp.s
 .PHONY : src/renderer/Camera.cpp.s
 
 src/renderer/Renderer.o: src/renderer/Renderer.cpp.o
@@ -231,7 +231,7 @@ src/renderer/Renderer.o: src/renderer/Renderer.cpp.o
 
 # target to build an object file
 src/renderer/Renderer.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.o
 .PHONY : src/renderer/Renderer.cpp.o
 
 src/renderer/Renderer.i: src/renderer/Renderer.cpp.i
@@ -239,7 +239,7 @@ src/renderer/Renderer.i: src/renderer/Renderer.cpp.i
 
 # target to preprocess a source file
 src/renderer/Renderer.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.i
 .PHONY : src/renderer/Renderer.cpp.i
 
 src/renderer/Renderer.s: src/renderer/Renderer.cpp.s
@@ -247,7 +247,7 @@ src/renderer/Renderer.s: src/renderer/Renderer.cpp.s
 
 # target to generate assembly for a file
 src/renderer/Renderer.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/renderer/Renderer.cpp.s
 .PHONY : src/renderer/Renderer.cpp.s
 
 src/simulation/Physics.o: src/simulation/Physics.cpp.o
@@ -255,7 +255,7 @@ src/simulation/Physics.o: src/simulation/Physics.cpp.o
 
 # target to build an object file
 src/simulation/Physics.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.o
 .PHONY : src/simulation/Physics.cpp.o
 
 src/simulation/Physics.i: src/simulation/Physics.cpp.i
@@ -263,7 +263,7 @@ src/simulation/Physics.i: src/simulation/Physics.cpp.i
 
 # target to preprocess a source file
 src/simulation/Physics.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.i
 .PHONY : src/simulation/Physics.cpp.i
 
 src/simulation/Physics.s: src/simulation/Physics.cpp.s
@@ -271,7 +271,7 @@ src/simulation/Physics.s: src/simulation/Physics.cpp.s
 
 # target to generate assembly for a file
 src/simulation/Physics.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/simulation/Physics.cpp.s
 .PHONY : src/simulation/Physics.cpp.s
 
 src/world/SingularPixelObject.o: src/world/SingularPixelObject.cpp.o
@@ -279,7 +279,7 @@ src/world/SingularPixelObject.o: src/world/SingularPixelObject.cpp.o
 
 # target to build an object file
 src/world/SingularPixelObject.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.o
 .PHONY : src/world/SingularPixelObject.cpp.o
 
 src/world/SingularPixelObject.i: src/world/SingularPixelObject.cpp.i
@@ -287,7 +287,7 @@ src/world/SingularPixelObject.i: src/world/SingularPixelObject.cpp.i
 
 # target to preprocess a source file
 src/world/SingularPixelObject.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.i
 .PHONY : src/world/SingularPixelObject.cpp.i
 
 src/world/SingularPixelObject.s: src/world/SingularPixelObject.cpp.s
@@ -295,7 +295,7 @@ src/world/SingularPixelObject.s: src/world/SingularPixelObject.cpp.s
 
 # target to generate assembly for a file
 src/world/SingularPixelObject.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/SingularPixelObject.cpp.s
 .PHONY : src/world/SingularPixelObject.cpp.s
 
 src/world/WorldGrid.o: src/world/WorldGrid.cpp.o
@@ -303,7 +303,7 @@ src/world/WorldGrid.o: src/world/WorldGrid.cpp.o
 
 # target to build an object file
 src/world/WorldGrid.cpp.o:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.o
 .PHONY : src/world/WorldGrid.cpp.o
 
 src/world/WorldGrid.i: src/world/WorldGrid.cpp.i
@@ -311,7 +311,7 @@ src/world/WorldGrid.i: src/world/WorldGrid.cpp.i
 
 # target to preprocess a source file
 src/world/WorldGrid.cpp.i:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.i
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.i
 .PHONY : src/world/WorldGrid.cpp.i
 
 src/world/WorldGrid.s: src/world/WorldGrid.cpp.s
@@ -319,7 +319,7 @@ src/world/WorldGrid.s: src/world/WorldGrid.cpp.s
 
 # target to generate assembly for a file
 src/world/WorldGrid.cpp.s:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.s
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/src/world/WorldGrid.cpp.s
 .PHONY : src/world/WorldGrid.cpp.s
 
 # Help Target
@@ -366,6 +366,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /data/data/com.termux/files/home/teste/UnixPixelMechanics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data/data/com.termux/files/home/teste/Teste/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/data/data/com.termux/files/home/teste/UnixPixelMechanics/sample_game/src/main.cpp" "sample_game/CMakeFiles/Game.dir/src/main.cpp.o" "gcc" "sample_game/CMakeFiles/Game.dir/src/main.cpp.o.d"
+  "/data/data/com.termux/files/home/teste/Teste/sample_game/src/main.cpp" "sample_game/CMakeFiles/Game.dir/src/main.cpp.o" "gcc" "sample_game/CMakeFiles/Game.dir/src/main.cpp.o.d"
   "" "sample_game/Game" "gcc" "sample_game/CMakeFiles/Game.dir/link.d"
   )
 

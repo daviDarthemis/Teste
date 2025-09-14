@@ -2,28 +2,29 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 
-Renderer::Renderer() : m_SdlRenderer(nullptr) {
-    // Construtor inicializa o ponteiro a null.
+// A definição do Vector4 move-se para cá, já que apenas o Renderer a usa.
+struct Vector4 {
+    unsigned char r, g, b, a;
+};
+
+Renderer::Renderer() : m_SdlRenderer(nullptr), m_ScreenWidth(0), m_ScreenHeight(0) {
 }
 
 Renderer::~Renderer() {
-    // O destrutor está vazio. A limpeza é feita explicitamente em Shutdown()
-    // para garantir a ordem correta de destruição (primeiro o renderer, depois a janela).
 }
 
 bool Renderer::Init(SDL_Window* window) {
-    // Se já tivermos um renderizador, destruímo-lo primeiro.
     if (m_SdlRenderer) {
         SDL_DestroyRenderer(m_SdlRenderer);
     }
-
-    // Cria o renderizador SDL.
     m_SdlRenderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-    
     if (!m_SdlRenderer) {
         std::cerr << "Erro ao criar o renderizador SDL: " << SDL_GetError() << std::endl;
         return false;
     }
+
+    // Obtém e armazena o tamanho da janela.
+    SDL_GetWindowSize(window, &m_ScreenWidth, &m_ScreenHeight);
 
     return true;
 }
@@ -36,20 +37,23 @@ void Renderer::Shutdown() {
 }
 
 void Renderer::BeginFrame() {
-    // Define a cor de limpeza para preto.
     SDL_SetRenderDrawColor(m_SdlRenderer, 0, 0, 0, 255);
-    // Limpa o ecrã com essa cor.
     SDL_RenderClear(m_SdlRenderer);
 }
 
 void Renderer::EndFrame() {
-    // Apresenta o buffer de volta para a janela.
     SDL_RenderPresent(m_SdlRenderer);
 }
 
-void Renderer::DrawPixel(int x, int y, const Vector4& color) {
-    // Define a cor de desenho para a cor do pixel.
+void Renderer::DrawWorldPixel(float worldX, float worldY, const Vector4& color) {
+    // 1. Converte a coordenada do mundo para a coordenada da tela usando a câmara.
+    Vector2i screenPos = m_Camera.WorldToScreen({worldX, worldY}, m_ScreenWidth, m_ScreenHeight);
+
+    // 2. Define a cor e desenha o ponto na coordenada da tela.
     SDL_SetRenderDrawColor(m_SdlRenderer, color.r, color.g, color.b, color.a);
-    // Desenha um ponto (pixel) na coordenada especificada.
-    SDL_RenderDrawPoint(m_SdlRenderer, x, y);
+    SDL_RenderDrawPoint(m_SdlRenderer, screenPos.x, screenPos.y);
+}
+
+Camera& Renderer::GetCamera() {
+    return m_Camera;
 }

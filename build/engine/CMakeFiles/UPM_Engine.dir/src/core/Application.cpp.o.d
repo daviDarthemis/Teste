@@ -1,7 +1,9 @@
 engine/CMakeFiles/UPM_Engine.dir/src/core/Application.cpp.o: \
-  /data/data/com.termux/files/home/teste/UnixPixelMechanics/engine/src/core/Application.cpp \
-  /data/data/com.termux/files/home/teste/UnixPixelMechanics/engine/include/core/Application.h \
-  /data/data/com.termux/files/home/teste/UnixPixelMechanics/engine/include/renderer/Renderer.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/src/core/Application.cpp \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/core/Application.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/renderer/Renderer.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/core/Types.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/renderer/Camera.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/SDL2/SDL.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/SDL2/SDL_main.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/SDL2/SDL_stdinc.h \

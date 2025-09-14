@@ -54,10 +54,10 @@ RM = /data/data/com.termux/files/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/data/com.termux/files/home/teste/UnixPixelMechanics
+CMAKE_SOURCE_DIR = /data/data/com.termux/files/home/teste/Teste
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/data/com.termux/files/home/teste/UnixPixelMechanics/build
+CMAKE_BINARY_DIR = /data/data/com.termux/files/home/teste/Teste/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -127,14 +127,14 @@ sample_game/clean: sample_game/CMakeFiles/Game.dir/clean
 engine/CMakeFiles/UPM_Engine.dir/all:
 	$(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11 "Built target UPM_Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11 "Built target UPM_Engine"
 .PHONY : engine/CMakeFiles/UPM_Engine.dir/all
 
 # Build rule for subdir invocation for target.
 engine/CMakeFiles/UPM_Engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine/CMakeFiles/UPM_Engine.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
 .PHONY : engine/CMakeFiles/UPM_Engine.dir/rule
 
 # Convenience name for target.
@@ -144,7 +144,7 @@ UPM_Engine: engine/CMakeFiles/UPM_Engine.dir/rule
 # codegen rule for target.
 engine/CMakeFiles/UPM_Engine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f engine/CMakeFiles/UPM_Engine.dir/build.make engine/CMakeFiles/UPM_Engine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11 "Finished codegen for target UPM_Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11 "Finished codegen for target UPM_Engine"
 .PHONY : engine/CMakeFiles/UPM_Engine.dir/codegen
 
 # clean rule for target.
@@ -159,14 +159,14 @@ engine/CMakeFiles/UPM_Engine.dir/clean:
 sample_game/CMakeFiles/Game.dir/all: engine/CMakeFiles/UPM_Engine.dir/all
 	$(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/depend
 	$(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles --progress-num=1,2 "Built target Game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=1,2 "Built target Game"
 .PHONY : sample_game/CMakeFiles/Game.dir/all
 
 # Build rule for subdir invocation for target.
 sample_game/CMakeFiles/Game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_game/CMakeFiles/Game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/teste/Teste/build/CMakeFiles 0
 .PHONY : sample_game/CMakeFiles/Game.dir/rule
 
 # Convenience name for target.
@@ -176,7 +176,7 @@ Game: sample_game/CMakeFiles/Game.dir/rule
 # codegen rule for target.
 sample_game/CMakeFiles/Game.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f sample_game/CMakeFiles/Game.dir/build.make sample_game/CMakeFiles/Game.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/CMakeFiles --progress-num=1,2 "Finished codegen for target Game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/data/data/com.termux/files/home/teste/Teste/build/CMakeFiles --progress-num=1,2 "Finished codegen for target Game"
 .PHONY : sample_game/CMakeFiles/Game.dir/codegen
 
 # clean rule for target.

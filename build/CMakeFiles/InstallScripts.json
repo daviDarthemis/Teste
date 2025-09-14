@@ -1,9 +1,9 @@
 {
 	"InstallScripts" : 
 	[
-		"/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/cmake_install.cmake",
-		"/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/engine/cmake_install.cmake",
-		"/data/data/com.termux/files/home/teste/UnixPixelMechanics/build/sample_game/cmake_install.cmake"
+		"/data/data/com.termux/files/home/teste/Teste/build/cmake_install.cmake",
+		"/data/data/com.termux/files/home/teste/Teste/build/engine/cmake_install.cmake",
+		"/data/data/com.termux/files/home/teste/Teste/build/sample_game/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

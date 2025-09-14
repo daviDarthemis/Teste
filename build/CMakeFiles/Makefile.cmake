@@ -7,12 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/data/data/com.termux/files/home/teste/UnixPixelMechanics/CMakeLists.txt"
+  "/data/data/com.termux/files/home/teste/Teste/CMakeLists.txt"
   "CMakeFiles/4.1.0/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.1.0/CMakeSystem.cmake"
-  "/data/data/com.termux/files/home/teste/UnixPixelMechanics/engine/CMakeLists.txt"
-  "/data/data/com.termux/files/home/teste/UnixPixelMechanics/sample_game/CMakeLists.txt"
+  "/data/data/com.termux/files/home/teste/Teste/engine/CMakeLists.txt"
+  "/data/data/com.termux/files/home/teste/Teste/sample_game/CMakeLists.txt"
   "/data/data/com.termux/files/usr/lib/cmake/SDL2/sdl2-config-version.cmake"
   "/data/data/com.termux/files/usr/lib/cmake/SDL2/sdl2-config.cmake"
   "/data/data/com.termux/files/usr/share/cmake-4.1/Modules/CMakeCCompiler.cmake.in"

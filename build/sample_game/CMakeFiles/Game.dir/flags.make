@@ -4,7 +4,7 @@
 # compile CXX with /data/data/com.termux/files/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/data/data/com.termux/files/home/teste/UnixPixelMechanics/engine/include -isystem /data/data/com.termux/files/usr/include/SDL2
+CXX_INCLUDES = -I/data/data/com.termux/files/home/teste/Teste/engine/include -isystem /data/data/com.termux/files/usr/include/SDL2
 
 CXX_FLAGS = -O2 -g -DNDEBUG -std=gnu++17
 
