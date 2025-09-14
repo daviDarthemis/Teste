@@ -57,8 +57,8 @@ void Application::Run() {
                     case SDLK_DOWN: m_Renderer->GetCamera().Move({0.0f, 10.0f / m_Renderer->GetCamera().GetZoom()}); break;
                     case SDLK_LEFT: m_Renderer->GetCamera().Move({-10.0f / m_Renderer->GetCamera().GetZoom(), 0.0f}); break;
                     case SDLK_RIGHT: m_Renderer->GetCamera().Move({10.0f / m_Renderer->GetCamera().GetZoom(), 0.0f}); break;
-                    case SDLK_KP_PLUS: case SDLK_l: m_Renderer->GetCamera().AdjustZoom(0.1f); break;
-                    case SDLK_KP_MINUS: case SDLK_r: m_Renderer->GetCamera().AdjustZoom(-0.1f); break;
+                    case SDLK_l: m_Renderer->GetCamera().AdjustZoom(0.1f); break;
+                    case SDLK_r: m_Renderer->GetCamera().AdjustZoom(-0.1f); break;
                 }
             }
         }

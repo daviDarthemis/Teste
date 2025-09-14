@@ -1,5 +1,5 @@
 #include "assets/UPM_Format.h"
-#include "vendor/FastNoiseLite.h" // A inclusão está correta
+#include "vendor/FastNoiseLite.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -7,76 +7,108 @@
 #include <string>
 #include <cstring>
 #include <ctime>
+#include <cmath> // Para abs
 
 struct Color { uint8_t r, g, b, a; };
 
 int main() {
-    std::cout << "Gerador de UPM v2.0 (com Geração de Forma por Ruído)" << std::endl;
+    std::cout << "Gerador de UPM v2.1 (com Tentáculos Processuais)" << std::endl;
 
-    // --- Configuração da Geração Procedural (usando a API C) ---
-    // 1. Criar o estado do ruído
+    // --- Configuração da Geração ---
     fnl_state noise = fnlCreateState();
     noise.noise_type = FNL_NOISE_OPENSIMPLEX2;
-    // Usar uma semente aleatória para que cada geração seja diferente
     srand(time(NULL));
     noise.seed = rand(); 
-    noise.frequency = 0.1f; // Frequência mais baixa = características maiores/mais suaves
-
-    float noiseThreshold = 0.0f; // Píxeis com ruído > 0.0 serão sólidos
+    noise.frequency = 0.1f;
+    float noiseThreshold = 0.0f;
 
     // --- Definição dos Dados ---
     UPM_Format::Header header;
-    header.magic = 0x204D5055;
-    header.version = 1;
-
     UPM_Format::Manifest manifest;
     manifest.imageWidth = 16;
     manifest.imageHeight = 16;
     
-    std::vector<Color> imageData(manifest.imageWidth * manifest.imageHeight);
+    std::vector<Color> imageData(manifest.imageWidth * manifest.imageHeight, {0,0,0,0});
     Color black = {20, 20, 20, 255};
     Color white = {255, 255, 255, 255};
-    Color transparent = {0, 0, 0, 0};
+    Color red = {200, 30, 30, 255};
 
     UPM_Format::BodyPartHeader corePartHeader;
     std::vector<UPM_Format::PixelCoord> corePartPixels;
 
-    // --- Geração da Imagem e do Corpo ---
+    // --- Geração do Núcleo (Core) ---
     for (uint16_t y = 0; y < manifest.imageHeight; ++y) {
         for (uint16_t x = 0; x < manifest.imageWidth; ++x) {
-            // 2. Obter o valor do ruído usando a função C
             float noiseValue = fnlGetNoise2D(&noise, (float)x, (float)y);
-            
-            // Se o ruído estiver acima do limiar, o píxel é sólido
             if (noiseValue > noiseThreshold) {
-                // Adicionar uma borda branca simples à forma
-                float borderNoise = fnlGetNoise3D(&noise, (float)x, (float)y, 42.0f); // Usar um 3º eixo para uma semente diferente
-                if (borderNoise > 0.5f) {
-                    imageData[y * manifest.imageWidth + x] = white;
-                } else {
-                    imageData[y * manifest.imageWidth + x] = black;
-                }
+                imageData[y * manifest.imageWidth + x] = black;
                 corePartPixels.push_back({x, y});
-            } else {
-                imageData[y * manifest.imageWidth + x] = transparent;
             }
         }
     }
-
     strncpy(corePartHeader.name, "core", 32);
     corePartHeader.pixelCount = corePartPixels.size();
 
+    // --- Geração do Tentáculo (Random Walker) ---
+    const int numTentacleSegments = 4;
+    const int segmentLength = 3;
+    std::vector<UPM_Format::BodyPartHeader> tentaclePartHeaders(numTentacleSegments);
+    std::vector<std::vector<UPM_Format::PixelCoord>> tentaclePixels(numTentacleSegments);
+
+    // 1. Encontrar um ponto de ancoragem na borda direita do núcleo
+    Vector2i anchorPoint = {-1, -1};
+    int bestX = 0;
+    for (const auto& p : corePartPixels) {
+        if (p.x > bestX) {
+            bestX = p.x;
+            anchorPoint = {(int)p.x, (int)p.y};
+        }
+    }
+
+    // 2. Executar o Random Walker se um ponto de ancoragem foi encontrado
+    if (anchorPoint.x != -1) {
+        Vector2i currentPos = anchorPoint;
+        for (int i = 0; i < numTentacleSegments; ++i) {
+            std::string partName = "tentacle_" + std::to_string(i);
+            strncpy(tentaclePartHeaders[i].name, partName.c_str(), 32);
+
+            for (int j = 0; j < segmentLength; ++j) {
+                // Escolher uma direção com forte viés para a direita
+                int dx = 0, dy = 0;
+                int r = rand() % 10;
+                if (r < 6) dx = 1;  // 60% de chance de ir para a direita
+                else if (r < 8) dy = 1; // 20% para baixo
+                else dy = -1;       // 20% para cima
+
+                Vector2i nextPos = {currentPos.x + dx, currentPos.y + dy};
+
+                // Validar o próximo passo
+                if (nextPos.x >= 0 && nextPos.x < manifest.imageWidth && 
+                    nextPos.y >= 0 && nextPos.y < manifest.imageHeight &&
+                    imageData[nextPos.y * manifest.imageWidth + nextPos.x].a == 0) // Só anda para espaço vazio
+                {
+                    currentPos = nextPos;
+                    imageData[currentPos.y * manifest.imageWidth + currentPos.x] = red;
+                    tentaclePixels[i].push_back({(uint16_t)currentPos.x, (uint16_t)currentPos.y});
+                }
+            }
+            tentaclePartHeaders[i].pixelCount = tentaclePixels[i].size();
+        }
+    }
+    
     // --- Definir Componentes ---
     std::vector<UPM_Format::ComponentDescriptor> components;
-    UPM_Format::ComponentDescriptor wobbleDesc;
-    wobbleDesc.type = 2;
-    strncpy(wobbleDesc.targetPart, "core", 32);
-    components.push_back(wobbleDesc);
+    components.push_back({2, "core"}); // Wobble no Core
+    components.push_back({3, "tentacle_"}); // Wave no prefixo "tentacle_"
 
     // --- Calcular Offsets e Escrever Ficheiro ---
     size_t imageDataSize = imageData.size() * sizeof(Color);
     size_t corePartDataSize = sizeof(corePartHeader) + (corePartPixels.size() * sizeof(UPM_Format::PixelCoord));
-    size_t bodyDataSize = sizeof(uint32_t) + corePartDataSize;
+    size_t allTentaclesDataSize = 0;
+    for(int i = 0; i < numTentacleSegments; ++i) {
+        allTentaclesDataSize += sizeof(tentaclePartHeaders[i]) + (tentaclePixels[i].size() * sizeof(UPM_Format::PixelCoord));
+    }
+    size_t bodyDataSize = sizeof(uint32_t) + corePartDataSize + allTentaclesDataSize;
     size_t componentDataSize = sizeof(uint32_t) + (components.size() * sizeof(UPM_Format::ComponentDescriptor));
 
     header.manifestOffset = sizeof(UPM_Format::Header);
@@ -91,16 +123,21 @@ int main() {
     outFile.write(reinterpret_cast<const char*>(&manifest), sizeof(manifest));
     outFile.write(reinterpret_cast<const char*>(imageData.data()), imageDataSize);
 
-    uint32_t partCount = 1;
+    uint32_t partCount = 1 + numTentacleSegments;
     outFile.write(reinterpret_cast<const char*>(&partCount), sizeof(partCount));
     outFile.write(reinterpret_cast<const char*>(&corePartHeader), sizeof(corePartHeader));
     outFile.write(reinterpret_cast<const char*>(corePartPixels.data()), corePartPixels.size() * sizeof(UPM_Format::PixelCoord));
+
+    for(int i = 0; i < numTentacleSegments; ++i) {
+        outFile.write(reinterpret_cast<const char*>(&tentaclePartHeaders[i]), sizeof(tentaclePartHeaders[i]));
+        outFile.write(reinterpret_cast<const char*>(tentaclePixels[i].data()), tentaclePixels[i].size() * sizeof(UPM_Format::PixelCoord));
+    }
 
     uint32_t componentCount = components.size();
     outFile.write(reinterpret_cast<const char*>(&componentCount), sizeof(componentCount));
     outFile.write(reinterpret_cast<const char*>(components.data()), componentDataSize);
 
     outFile.close();
-    std::cout << "Ficheiro 'venom.upm' com forma de blob gerada processualmente com sucesso." << std::endl;
+    std::cout << "Ficheiro 'venom.upm' com núcleo e tentáculo processuais gerado com sucesso." << std::endl;
     return 0;
 }
