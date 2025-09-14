@@ -842,6 +842,7 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/AssetManager.cpp.o: \
   /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Parser.h \
   /data/data/com.termux/files/home/teste/Teste/engine/include/world/SingularPixelObject.h \
   /data/data/com.termux/files/home/teste/Teste/engine/include/core/Types.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/Body.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/fstream \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/filesystem \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/__filesystem/copy_options.h \

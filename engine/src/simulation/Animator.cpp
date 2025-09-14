@@ -1,48 +1,86 @@
 #include "simulation/Animator.h"
 #include "world/SingularPixelObject.h"
-#include <cmath> // Para std::sin e std::cos
-#include <algorithm> // para std::fill
+#include <cmath>
+#include <algorithm>
+#include <string> // Necessário para std::string
 
 void Animator::ApplyWobble(SingularPixelObject& spo, float totalTime) {
     const Vector2i& size = spo.GetSize();
     const std::vector<Vector4>& basePixels = spo.GetBasePixelData();
     std::vector<Vector4>& deformedPixels = spo.GetDeformedPixelData();
 
-    // Limpa o buffer deformado com píxeis transparentes antes de o redesenhar
     std::fill(deformedPixels.begin(), deformedPixels.end(), Vector4{0, 0, 0, 0});
 
-    // Calcula um fator de escala que oscila suavemente entre ~0.9 e ~1.1
-    float scale = 1.0f + 0.1f * std::sin(totalTime * 3.0f); // O * 3.0f controla a velocidade da pulsação
-
-    // O centro do objeto, a partir do qual a escala será aplicada
+    float scale = 1.0f + 0.1f * std::sin(totalTime * 3.0f);
     float centerX = size.x / 2.0f;
     float centerY = size.y / 2.0f;
 
-    // Itera por cada pixel da imagem BASE
     for (int y = 0; y < size.y; ++y) {
         for (int x = 0; x < size.x; ++x) {
             const Vector4& baseColor = basePixels[y * size.x + x];
-
-            // Se o pixel base não for transparente
             if (baseColor.a > 0) {
-                // 1. Calcula a posição do pixel relativa ao centro
                 float relativeX = static_cast<float>(x) - centerX;
                 float relativeY = static_cast<float>(y) - centerY;
-
-                // 2. Aplica a escala a essa posição
                 float newRelativeX = relativeX * scale;
                 float newRelativeY = relativeY * scale;
-
-                // 3. Converte de volta para coordenadas de píxeis no objeto
                 int deformedX = static_cast<int>(newRelativeX + centerX);
                 int deformedY = static_cast<int>(newRelativeY + centerY);
                 
-                // 4. Escreve a cor do pixel base na sua NOVA posição no buffer DEFORMADO
-                // (Com verificação de limites para não escrever fora do vetor)
                 if (deformedX >= 0 && deformedX < size.x && deformedY >= 0 && deformedY < size.y) {
                     deformedPixels[deformedY * size.x + deformedX] = baseColor;
                 }
             }
+        }
+    }
+}
+
+// NOVA IMPLEMENTAÇÃO
+void Animator::ApplyShear(SingularPixelObject& spo, const std::string& partName, float totalTime) {
+    const Vector2i& size = spo.GetSize();
+    const std::vector<Vector4>& basePixels = spo.GetBasePixelData();
+    std::vector<Vector4>& deformedPixels = spo.GetDeformedPixelData();
+
+    // 1. Encontrar a parte do corpo alvo
+    BodyPart* targetPart = nullptr;
+    for (auto& part : spo.GetBodyParts()) {
+        if (part.name == partName) {
+            targetPart = &part;
+            break;
+        }
+    }
+
+    // Se a parte não for encontrada, não faz nada.
+    if (!targetPart) {
+        return;
+    }
+
+    // 2. Copiar a imagem base para a imagem deformada.
+    // Desta forma, os píxeis que não pertencem à parte alvo já estarão no lugar correto.
+    deformedPixels = basePixels;
+
+    // 3. Calcular o fator de deformação
+    // Uma onda senoidal que causa um deslocamento horizontal de até 2 píxeis.
+    float shearFactor = 2.0f * std::sin(totalTime * 5.0f); // * 5.0f para uma oscilação mais rápida
+
+    // 4. Iterar APENAS sobre os píxeis da parte alvo
+    for (const auto& coord : targetPart->pixelCoordinates) {
+        int baseX = coord.x;
+        int baseY = coord.y;
+        
+        const Vector4& baseColor = basePixels[baseY * size.x + baseX];
+
+        // Calcula a nova posição X
+        // O cisalhamento é proporcional à altura do pixel na imagem (normalizada)
+        float normalizedY = static_cast<float>(baseY) / static_cast<float>(size.y);
+        int deformedX = baseX + static_cast<int>(shearFactor * normalizedY);
+        int deformedY = baseY; // A altura Y não muda
+
+        // 5. Apagar o pixel da sua posição original no buffer deformado
+        deformedPixels[baseY * size.x + baseX] = {0, 0, 0, 0}; // Torna-o transparente
+
+        // 6. Desenhar o pixel na sua nova posição deformada
+        if (deformedX >= 0 && deformedX < size.x && deformedY >= 0 && deformedY < size.y) {
+            deformedPixels[deformedY * size.x + deformedX] = baseColor;
         }
     }
 }

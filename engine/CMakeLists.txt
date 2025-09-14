@@ -14,7 +14,8 @@ add_library(UPM_Engine STATIC
     include/world/WorldGrid.h
     src/world/SingularPixelObject.cpp
     include/world/SingularPixelObject.h
-    
+    include/world/Body.h # Adicionado
+
     src/assets/AssetManager.cpp
     include/assets/AssetManager.h
     src/assets/UPM_Parser.cpp

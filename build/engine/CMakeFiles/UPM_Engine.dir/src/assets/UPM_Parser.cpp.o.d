@@ -815,6 +815,7 @@ engine/CMakeFiles/UPM_Engine.dir/src/assets/UPM_Parser.cpp.o: \
   /data/data/com.termux/files/home/teste/Teste/engine/include/assets/UPM_Format.h \
   /data/data/com.termux/files/home/teste/Teste/engine/include/world/SingularPixelObject.h \
   /data/data/com.termux/files/home/teste/Teste/engine/include/core/Types.h \
+  /data/data/com.termux/files/home/teste/Teste/engine/include/world/Body.h \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/iostream \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/istream \
   /data/data/com.termux/files/usr/bin/../../usr/include/c++/v1/ostream \
